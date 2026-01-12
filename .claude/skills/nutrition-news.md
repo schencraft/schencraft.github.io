@@ -1,6 +1,6 @@
 # Nutrition News
 
-Research recent nutrition news and add updates to the Nutrition News project page.
+Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page.
 
 ## Usage
 
@@ -34,24 +34,29 @@ Examples:
 4. **Check for month rollover** before updating:
    - Read `_projects/nutrition-news.md` to check the current month of entries
    - If the current month differs from today's month:
-     a. Archive the old content to `_projects/nutrition-news-YYYY-MM.md` (e.g., `nutrition-news-2026-01.md`)
+     a. Archive the old content to `_projects/nutrition-news-YYYY-MM.md`
      b. Clear the main page content (keep intro and archive links)
      c. Add a link to the new archive in the "Past Updates" section
 
 5. **Update the main project page** at `_projects/nutrition-news.md`:
-   - Add a new date section: `## Month Day, Year`
-   - Add news items under that date
-   - Keep only current month's entries on main page
+   - Add a new date section: `## Month Day, Year | YYYY年M月D日`
+   - Add news items under that date in bilingual format
 
-6. **Format each news item**:
+6. **Format each news item with English AND Chinese**:
    ```markdown
-   ### [News Item Title]
+   ### [English Title]
 
-   Summary of the finding/news. What the research showed or what experts are saying.
+   English summary of the finding/news.
 
-   **Key takeaway:** Actionable insight for readers.
+   **Key takeaway:** English actionable insight.
 
-   *Source: [Publication Name](url)*
+   ---
+
+   **中文摘要：** Chinese translation of the summary.
+
+   **关键要点：** Chinese translation of the key takeaway.
+
+   *Source/来源: [Publication Name](url)*
 
    ---
    ```
@@ -59,45 +64,44 @@ Examples:
 7. **Main page structure**:
    ```markdown
    ---
-   title: "Nutrition News"
-   description: "Curated updates on nutrition research..."
+   title: "Nutrition News | 营养新闻"
+   description: "Curated updates on nutrition research | 营养研究精选更新"
    tech: [Health, Research, Nutrition Science]
    featured: true
    ---
 
-   Intro paragraph...
+   A curated collection of the latest nutrition research...
+
+   最新营养研究、饮食指南和健康科学的精选更新。
 
    ---
 
-   ## [Current Month Entries]
+   ## [Date entries with bilingual content]
    ...
 
    ---
 
-   ## Past Updates
+   ## Past Updates | 往期更新
 
-   - [January 2026](/projects/nutrition-news-2026-01/)
-   - [December 2025](/projects/nutrition-news-2025-12/)
+   - [January 2026 | 2026年1月](/projects/nutrition-news-2026-01/)
 
-   *Last updated: [date]*
+   *Last updated | 最后更新: [date]*
    ```
 
 8. **Archive page format** (`nutrition-news-YYYY-MM.md`):
-   ```markdown
-   ---
-   title: "Nutrition News - January 2026"
-   description: "Nutrition news archive for January 2026"
-   ---
+   - Same bilingual format as main page
+   - Include back link: `[Back to current news | 返回最新](/projects/nutrition-news/)`
 
-   [All entries from that month]
+9. **Translation guidelines**:
+   - Use Simplified Chinese (简体中文)
+   - Keep technical terms accurate (e.g., GLP-1, omega-3 can stay in English)
+   - Translate naturally, not word-for-word
+   - Maintain the same balanced, non-sensationalist tone
 
-   [Back to current news](/projects/nutrition-news/)
-   ```
+10. **Important content guidelines**:
+    - Always cite sources with links
+    - Distinguish between preliminary research and established science
+    - Include practical takeaways when possible
+    - Note if studies are in animals vs humans, small sample sizes, etc.
 
-9. **Important guidelines**:
-   - Always cite sources with links
-   - Distinguish between preliminary research and established science
-   - Avoid sensationalist claims - be balanced and accurate
-   - Include practical takeaways when possible
-
-10. After updating, show what was added and confirm the file path.
+11. After updating, show what was added and confirm the file path.
