@@ -92,4 +92,10 @@ The FDA also recently approved the first oral GLP-1 for weight loss (Wegovy pill
 
 ---
 
+## Past Updates
+
+*No archives yet - this section will list monthly archives as they're created.*
+
+---
+
 *Last updated: January 11, 2026*

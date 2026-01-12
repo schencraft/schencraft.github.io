@@ -31,13 +31,19 @@ Examples:
    - Include the source for each
    - Ask if they want to include all, select specific ones, or search for more
 
-4. **Update the project page** at `_projects/nutrition-news.md`:
-   - Read the existing file first
-   - Add a new date section at the TOP of the content (after the intro paragraph)
-   - Use today's date as the section header: `## Month Day, Year`
-   - Add news items under that date
+4. **Check for month rollover** before updating:
+   - Read `_projects/nutrition-news.md` to check the current month of entries
+   - If the current month differs from today's month:
+     a. Archive the old content to `_projects/nutrition-news-YYYY-MM.md` (e.g., `nutrition-news-2026-01.md`)
+     b. Clear the main page content (keep intro and archive links)
+     c. Add a link to the new archive in the "Past Updates" section
 
-5. **Format each news item**:
+5. **Update the main project page** at `_projects/nutrition-news.md`:
+   - Add a new date section: `## Month Day, Year`
+   - Add news items under that date
+   - Keep only current month's entries on main page
+
+6. **Format each news item**:
    ```markdown
    ### [News Item Title]
 
@@ -50,13 +56,48 @@ Examples:
    ---
    ```
 
-6. **Update the "Last updated" date** at the bottom of the file.
+7. **Main page structure**:
+   ```markdown
+   ---
+   title: "Nutrition News"
+   description: "Curated updates on nutrition research..."
+   tech: [Health, Research, Nutrition Science]
+   featured: true
+   ---
 
-7. **Important guidelines**:
+   Intro paragraph...
+
+   ---
+
+   ## [Current Month Entries]
+   ...
+
+   ---
+
+   ## Past Updates
+
+   - [January 2026](/projects/nutrition-news-2026-01/)
+   - [December 2025](/projects/nutrition-news-2025-12/)
+
+   *Last updated: [date]*
+   ```
+
+8. **Archive page format** (`nutrition-news-YYYY-MM.md`):
+   ```markdown
+   ---
+   title: "Nutrition News - January 2026"
+   description: "Nutrition news archive for January 2026"
+   ---
+
+   [All entries from that month]
+
+   [Back to current news](/projects/nutrition-news/)
+   ```
+
+9. **Important guidelines**:
    - Always cite sources with links
    - Distinguish between preliminary research and established science
    - Avoid sensationalist claims - be balanced and accurate
    - Include practical takeaways when possible
-   - Note if studies are in animals vs humans, small sample sizes, etc.
 
-8. After updating, show what was added and the file path.
+10. After updating, show what was added and confirm the file path.
