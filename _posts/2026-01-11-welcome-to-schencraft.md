@@ -1,26 +1,28 @@
 ---
 layout: post
-title: "Welcome to SChen Craft"
+title: "Welcome to My Blog"
 date: 2026-01-11
 categories: [general]
 ---
 
-Hello and welcome to my blog!
+Hello and welcome!
 
-I'm Simon Chen, and this is where I'll be sharing my thoughts on design, technology, and the creative process.
+I'm Simon Chen, and this is my personal space on the internet where I share thoughts on design, technology, and the creative journey.
 
-## What to Expect
+## Why This Blog?
 
-Here you'll find:
+Over the years, I've accumulated knowledge and experiences that I believe could be valuable to others. This blog is my way of giving back to the community that has taught me so much.
 
-- **Design insights** - UI/UX principles and creative explorations
-- **Tech tutorials** - Practical guides on web development and tools
-- **Project updates** - Behind-the-scenes looks at what I'm building
+## What You'll Find Here
 
-## Stay Connected
+- **Design Insights** - Explorations in UI/UX, visual design principles, and creative problem-solving
+- **Tech Tutorials** - Practical guides on web development, tools, and workflows
+- **Project Stories** - Behind-the-scenes looks at what I'm building and learning
 
-Follow along on [GitHub](https://github.com/schencraft) for code and projects.
+## Let's Connect
 
-Thanks for reading!
+I'm always excited to meet fellow creators and technologists. Feel free to connect with me on [GitHub](https://github.com/schencraft).
 
-*- Simon*
+Stay tuned for more content coming soon.
+
+*- Simon Chen*

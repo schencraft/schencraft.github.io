@@ -1,24 +1,32 @@
-title: SChen Craft
-description: Design & Tech by Simon Chen
+title: Simon Chen
+description: Design & Technology
 author: Simon Chen
-email: # your email (optional)
+url: "https://schencraft.github.io"
 
-# Theme
-remote_theme: pages-themes/minimal@v0.2.0
+# Theme - Minima is clean and modern
+remote_theme: jekyll/minima@v2.5.1
 plugins:
   - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Minima skin (dark, classic, auto, solarized, solarized-dark)
+minima:
+  skin: classic
+  date_format: "%B %-d, %Y"
 
 # Build settings
 markdown: kramdown
 permalink: /:title/
+show_excerpts: true
 
-# Navigation
+# Header navigation
 header_pages:
   - about.md
 
-# Social links (optional - uncomment and fill in)
+# Social links (shows in footer)
+github_username: schencraft
 # twitter_username: your_twitter
-# github_username: schencraft
 # linkedin_username: your_linkedin
 
 # Defaults
@@ -28,6 +36,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "Simon Chen"
   - scope:
       path: ""
     values:

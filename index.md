@@ -1,18 +1,8 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
-# Welcome to SChen Craft
+Hi, I'm **Simon Chen** - a creative technologist exploring the intersection of design and technology.
 
-I'm **Simon Chen**, a creative technologist exploring the intersection of design and technology.
-
-## Latest Posts
-
-{% for post in site.posts limit:5 %}
-- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
-
----
-
-*Building things that matter.*
+I write about UI/UX design, web development, and building digital products. Welcome to my corner of the internet.
