@@ -1,0 +1,34 @@
+title: SChen Craft
+description: Design & Tech by Simon Chen
+author: Simon Chen
+email: # your email (optional)
+
+# Theme
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# Navigation
+header_pages:
+  - about.md
+
+# Social links (optional - uncomment and fill in)
+# twitter_username: your_twitter
+# github_username: schencraft
+# linkedin_username: your_linkedin
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
