@@ -1,0 +1,34 @@
+---
+---
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+// Custom font - Inter
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+}
+
+// Code blocks - JetBrains Mono
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+// Improve readability
+.post-content {
+  line-height: 1.7;
+}
+
+// Subtle improvements
+.site-title {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
