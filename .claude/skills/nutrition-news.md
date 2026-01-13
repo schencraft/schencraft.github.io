@@ -104,4 +104,19 @@ Examples:
     - Include practical takeaways when possible
     - Note if studies are in animals vs humans, small sample sizes, etc.
 
-11. After updating, show what was added and confirm the file path.
+11. **Commit and push to GitHub**:
+    - Stage the changed files: `git add _projects/nutrition-news*.md`
+    - Commit with a descriptive message listing the news items added
+    - Push to origin main
+    - Example commit message:
+      ```
+      Add nutrition news for [Date]
+
+      - [Brief title of news item 1]
+      - [Brief title of news item 2]
+      - [etc.]
+
+      Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
+      ```
+
+12. After pushing, show what was added and provide the live URL: `https://schencraft.github.io/projects/nutrition-news/`
