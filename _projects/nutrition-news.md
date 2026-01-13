@@ -11,6 +11,111 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 
 ---
 
+## January 12, 2026 | 2026年1月12日
+
+### Harvard Experts Raise Concerns About New Dietary Guidelines
+
+Three Harvard T.H. Chan School of Public Health faculty members who served on the Dietary Guidelines Advisory Committee have raised concerns about the final 2025-2030 guidelines.
+
+Key criticisms include:
+- **Animal protein emphasis**: Guidelines prioritize meat over plant-based proteins, despite most Americans already getting adequate protein
+- **Dairy inconsistency**: The three-serving daily recommendation for full-fat dairy conflicts with the guidelines' own saturated fat limits
+- **Missing vegetable oils**: Despite being primary sources of healthy unsaturated fats, vegetable oils are notably absent
+- **Transparency issues**: Lack of clarity about who wrote the final guidelines and what methodology was used
+
+**Key takeaway:** Consider using Harvard's [Healthy Eating Plate](https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/) as an evidence-based alternative guide, and consult a registered dietitian for personalized advice.
+
+---
+
+**中文摘要：** 三位在膳食指南咨询委员会任职的哈佛大学陈曾熙公共卫生学院教授对最终的2025-2030年指南提出了担忧。主要批评包括：指南优先考虑肉类而非植物蛋白，尽管大多数美国人蛋白质摄入已经充足；每日三份全脂乳制品的建议与指南自身的饱和脂肪限制相矛盾；健康不饱和脂肪的主要来源——植物油明显缺失；以及最终指南的编写者和方法缺乏透明度。
+
+**关键要点：** 可以考虑使用哈佛的"健康饮食餐盘"作为循证替代指南，并咨询注册营养师获取个性化建议。
+
+*Source/来源: [Harvard T.H. Chan School of Public Health](https://hsph.harvard.edu/news/understanding-the-new-dietary-guidelines-for-americans/)*
+
+---
+
+### Half of Americans Plan New Diet for 2026
+
+A survey of 2,201 U.S. adults by the Physicians Committee for Responsible Medicine found that nearly half plan to start a new diet this year.
+
+**Popular approaches:**
+- 42% plan to reduce calorie intake
+- 28% will try low-carb diets (keto, Atkins, South Beach)
+- Only 6% plan to try plant-based or vegan diets
+
+**The cost paradox:** Over 80% cited grocery costs as important when choosing a diet, yet most overlook plant-based options. Research shows plant-based diets can reduce food costs by ~$1.80/day compared to typical American diets, and a 2018 study found participants lost an average of 14.3 pounds over 16 weeks on a plant-based diet.
+
+**Key takeaway:** If cost is a concern, don't overlook plant-based eating—beans, lentils, and whole grains are among the most affordable protein sources available.
+
+---
+
+**中文摘要：** 美国责任医学医师委员会对2,201名美国成年人的调查发现，近一半人计划今年开始新的饮食方式。42%计划减少卡路里摄入，28%将尝试低碳水化合物饮食，但只有6%计划尝试植物性饮食。超过80%的人表示杂货成本是选择饮食时的重要因素，但大多数人忽视了植物性选择——尽管研究表明植物性饮食每天可节省约1.80美元。
+
+**关键要点：** 如果成本是您的考虑因素，不要忽视植物性饮食——豆类、扁豆和全谷物是最实惠的蛋白质来源之一。
+
+*Source/来源: [Physicians Committee for Responsible Medicine](https://www.pcrm.org/news/news-releases/survey-half-us-adults-resolve-start-new-diet-2026)*
+
+---
+
+### Mediterranean Diet Remains Expert Favorite for 2026
+
+Despite the buzz around new dietary trends, nutrition experts overwhelmingly recommend the Mediterranean diet for long-term health.
+
+According to a U.S. News & World Report survey:
+- **69% of experts** chose Mediterranean as the most effective diet for long-term health and weight management
+- **90% cite** the emphasis on fruits, vegetables, whole grains, and legumes as key to its effectiveness
+
+The diet emphasizes olive oil, fish, nuts, and moderate wine consumption while limiting red meat and processed foods.
+
+**Key takeaway:** Trendy diets come and go, but the Mediterranean approach has decades of research supporting its benefits for heart health, brain function, and longevity.
+
+---
+
+**中文摘要：** 尽管新的饮食趋势引起关注，但营养专家仍然压倒性地推荐地中海饮食作为长期健康之选。根据《美国新闻与世界报道》的调查，69%的专家选择地中海饮食作为长期健康和体重管理最有效的饮食方式，90%的专家认为其对水果、蔬菜、全谷物和豆类的强调是关键。
+
+**关键要点：** 流行饮食来来去去，但地中海饮食方式有数十年的研究支持其对心脏健康、大脑功能和长寿的益处。
+
+*Source/来源: [U.S. News & World Report](https://health.usnews.com/wellness/articles/top-health-and-nutrition-trends-for-2026)*
+
+---
+
+### Full-Fat Cheese Linked to Lower Dementia Risk
+
+A large study tracking participants for more than 25 years found that eating full-fat cheese and cream may be associated with a lower risk of dementia.
+
+This adds to growing evidence that dairy fat may not be as harmful as once thought—though researchers caution this is observational data, not proof of cause and effect.
+
+**Key takeaway:** Enjoying cheese in moderation as part of a balanced diet appears to be fine for most people. The key word remains "moderation"—this isn't a license to overindulge.
+
+---
+
+**中文摘要：** 一项追踪参与者超过25年的大型研究发现，食用全脂奶酪和奶油可能与较低的痴呆风险有关。这增加了越来越多的证据，表明乳脂肪可能不像曾经认为的那样有害——尽管研究人员提醒这是观察性数据，而非因果关系的证明。
+
+**关键要点：** 作为均衡饮食的一部分，适量享用奶酪对大多数人来说似乎是可以的。关键词仍然是"适量"——这不是过度放纵的许可。
+
+*Source/来源: [The Globe and Mail](https://www.theglobeandmail.com/life/health-and-fitness/article-healthy-eating-tips-diet-nutrition-2026/)*
+
+---
+
+### Plant Protein in Midlife Linked to Healthier Aging
+
+A study from Tufts University and Harvard T.H. Chan School of Public Health found that women who consumed the most plant protein in their 40s and 50s had a **46% greater likelihood of healthy aging** compared to those who ate less.
+
+Plant protein sources include beans, lentils, tofu, tempeh, nuts, seeds, and whole grains.
+
+**Key takeaway:** It's never too early to prioritize plant proteins. Even if you're not vegetarian, adding more legumes and nuts to your diet may pay dividends for healthy aging.
+
+---
+
+**中文摘要：** 塔夫茨大学和哈佛大学陈曾熙公共卫生学院的一项研究发现，在40多岁和50多岁时摄入最多植物蛋白的女性，与摄入较少的女性相比，**健康老龄化的可能性高出46%**。植物蛋白来源包括豆类、扁豆、豆腐、天贝、坚果、种子和全谷物。
+
+**关键要点：** 优先考虑植物蛋白永远不嫌早。即使您不是素食者，在饮食中添加更多豆类和坚果可能对健康老龄化大有裨益。
+
+*Source/来源: [The Globe and Mail](https://www.theglobeandmail.com/life/health-and-fitness/article-healthy-eating-tips-diet-nutrition-2026/)*
+
+---
+
 ## January 11, 2026 | 2026年1月11日
 
 ### New U.S. Dietary Guidelines Spark Debate
@@ -132,4 +237,4 @@ The FDA also recently approved the first oral GLP-1 for weight loss (Wegovy pill
 
 ---
 
-*Last updated | 最后更新: January 11, 2026 | 2026年1月11日*
+*Last updated | 最后更新: January 12, 2026 | 2026年1月12日*
