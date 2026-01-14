@@ -1,6 +1,6 @@
 # Nutrition News
 
-Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page as horizontal scrollable knowledge cards.
+Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page as Swiper.js card carousels.
 
 **This skill runs fully automated** — no user confirmation required. It will search, curate, write, and publish in one go.
 
@@ -37,19 +37,21 @@ Examples:
      c. Add a link to the new archive in the "Past Updates" section
 
 4. **Update the main project page** at `_projects/nutrition-news.md`:
-   - Add a new date section with cards format (see below)
-   - Insert AFTER the intro section `---` and BEFORE any existing date sections
+   - Add a new date section with Swiper carousel (see below)
+   - Insert AFTER the intro `---` and BEFORE any existing date sections
 
-5. **Format as horizontal scrollable bilingual knowledge cards**:
+5. **Format as Swiper.js bilingual card carousel**:
 
    ```html
    <div class="news-date">Month Day, Year <span class="date-cn">| YYYY年M月D日</span></div>
-   <p class="scroll-hint">Scroll for more</p>
-   <div class="news-cards-container">
-   <div class="news-cards">
 
+   <div class="news-carousel">
+   <div class="swiper news-swiper-[unique-id]">
+   <div class="swiper-wrapper">
+
+   <div class="swiper-slide">
    <div class="news-card">
-   <h4>🎯 Short Catchy English Title</h4>
+   <h4>🎯 Short English Title</h4>
    <div class="card-title-cn">中文标题</div>
    <div class="card-content">
    English summary (2-3 sentences). Include key numbers/stats.
@@ -57,13 +59,18 @@ Examples:
    <div class="card-content-cn">
    中文摘要（2-3句）。包含关键数据。
    </div>
-   <div class="card-takeaway"><strong>Takeaway:</strong> English actionable insight.</div>
+   <div class="card-takeaway"><strong>Takeaway:</strong> English insight.</div>
    <div class="card-takeaway-cn"><strong>要点：</strong> 中文要点。</div>
    <div class="card-source">Source/来源: <a href="URL">Source Name</a></div>
    </div>
+   </div>
 
-   <!-- More cards... -->
+   <!-- More slides... -->
 
+   </div>
+   <div class="swiper-pagination"></div>
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
    </div>
    </div>
    ```
@@ -85,19 +92,43 @@ Examples:
    - Maintain balanced, non-sensationalist tone in both languages
 
 8. **Archive page format** (`nutrition-news-YYYY-MM.md`):
-   - Same card format as main page
+   - Same Swiper format as main page
    - Include back link: `[Back to current news | 返回最新](/projects/nutrition-news/)`
+   - Include the Swiper init script at the end
 
 9. **Important content guidelines**:
    - Always cite sources with links
    - Distinguish between preliminary research and established science
    - Include practical takeaways
    - Note if studies are in animals vs humans, small sample sizes, etc.
-   - Keep each card concise — users scroll horizontally to see more
+   - Keep each card concise for easy scanning
 
-10. **Commit and push to GitHub** by running:
+10. **Swiper init script** (already at bottom of page, no need to add again):
+    ```html
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.swiper').forEach(function(el) {
+        new Swiper(el, {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+          grabCursor: true,
+          pagination: {
+            el: el.querySelector('.swiper-pagination'),
+            clickable: true,
+          },
+          navigation: {
+            nextEl: el.querySelector('.swiper-button-next'),
+            prevEl: el.querySelector('.swiper-button-prev'),
+          },
+        });
+      });
+    });
+    </script>
+    ```
+
+11. **Commit and push to GitHub** by running:
     ```bash
     .claude/scripts/push-nutrition-news.sh "Add nutrition news for [Date] - [brief summary of items]"
     ```
 
-11. Confirm the push succeeded and share the live URL shown in the script output.
+12. Confirm the push succeeded and share the live URL shown in the script output.

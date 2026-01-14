@@ -31,50 +31,62 @@ code, pre {
   letter-spacing: -0.5px;
 }
 
-// Knowledge Cards - Horizontal Scrolling
-.news-cards-container {
-  margin: 1.5rem 0 2rem;
+// Knowledge Cards - Swiper Carousel
+.news-carousel {
+  margin: 1rem 0 2.5rem;
+  padding-bottom: 2.5rem;
+  position: relative;
 }
 
-.news-cards {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0.5rem 0 1rem;
-  -webkit-overflow-scrolling: touch;
+.swiper {
+  padding: 0.5rem 0.25rem 2rem;
+}
 
-  // Hide scrollbar but keep functionality
-  scrollbar-width: thin;
-  scrollbar-color: #ddd transparent;
+.swiper-slide {
+  width: 340px;
+  height: auto;
+}
 
-  &::-webkit-scrollbar {
-    height: 6px;
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #0366d6;
+  opacity: 0.3;
+
+  &-active {
+    opacity: 1;
   }
+}
 
-  &::-webkit-scrollbar-track {
-    background: transparent;
+.swiper-button-prev,
+.swiper-button-next {
+  color: #0366d6;
+
+  &::after {
+    font-size: 1.25rem;
   }
+}
 
-  &::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 3px;
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }
 
 .news-card {
-  flex: 0 0 340px;
-  scroll-snap-align: start;
   background: #fff;
   border: 1px solid #e1e4e8;
   border-radius: 12px;
   padding: 1.25rem;
+  height: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
   }
 
   h4 {
@@ -205,8 +217,12 @@ code, pre {
     .date-cn { color: #8b949e; }
   }
 
-  .news-cards {
-    scrollbar-color: #30363d transparent;
-    &::-webkit-scrollbar-thumb { background: #30363d; }
+  .swiper-pagination-bullet {
+    background: #58a6ff;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #58a6ff;
   }
 }

@@ -12,10 +12,12 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 ---
 
 <div class="news-date">January 13, 2026 <span class="date-cn">| 2026年1月13日</span></div>
-<p class="scroll-hint">Scroll for more</p>
-<div class="news-cards-container">
-<div class="news-cards">
 
+<div class="news-carousel">
+<div class="swiper news-swiper-1">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🍊 Vitamin C Changes Skin Structure</h4>
 <div class="card-title-cn">维生素C改变皮肤结构</div>
@@ -29,7 +31,9 @@ Dietary vitamin C travels through blood directly into skin layers, increasing th
 <div class="card-takeaway-cn"><strong>要点：</strong> 通过水果蔬菜摄入维生素C，而不仅仅是涂抹护肤品。</div>
 <div class="card-source">Source/来源: <a href="https://www.sciencedaily.com/releases/2025/12/251226045343.htm">Journal of Investigative Dermatology</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🥗 Not All Plant Diets Equal</h4>
 <div class="card-title-cn">并非所有植物饮食都一样</div>
@@ -43,7 +47,9 @@ Study of 63,835 adults over 9 years: minimally processed plant foods cut heart r
 <div class="card-takeaway-cn"><strong>要点：</strong> 选择天然食物（豆类、扁豆、坚果）而非加工的素食替代品。</div>
 <div class="card-source">Source/来源: <a href="https://www.sciencedaily.com/releases/2025/12/251214100928.htm">INRAE-Inserm Study</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>☕ Coffee May Help Blood Sugar</h4>
 <div class="card-title-cn">咖啡可能有助于血糖控制</div>
@@ -57,7 +63,9 @@ Newly discovered compounds in roasted coffee inhibit α-glucosidase, a key enzym
 <div class="card-takeaway-cn"><strong>要点：</strong> 适量黑咖啡可能有代谢益处——加糖会抵消这些益处。</div>
 <div class="card-source">Source/来源: <a href="https://www.sciencedaily.com/news/health_medicine/nutrition/">ScienceDaily</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🧪 Preservatives & Diabetes Risk</h4>
 <div class="card-title-cn">防腐剂与糖尿病风险</div>
@@ -71,15 +79,22 @@ A 10+ year study found people with highest preservative additive intake were sig
 <div class="card-takeaway-cn"><strong>要点：</strong> 优先选择新鲜食物，而非配料表冗长的包装食品。</div>
 <div class="card-source">Source/来源: <a href="https://www.sciencedaily.com/news/health_medicine/nutrition/">ScienceDaily</a></div>
 </div>
+</div>
 
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
 </div>
 </div>
 
 <div class="news-date">January 12, 2026 <span class="date-cn">| 2026年1月12日</span></div>
-<p class="scroll-hint">Scroll for more</p>
-<div class="news-cards-container">
-<div class="news-cards">
 
+<div class="news-carousel">
+<div class="swiper news-swiper-2">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
 <div class="news-card">
 <h4>📋 Harvard Critiques Guidelines</h4>
 <div class="card-title-cn">哈佛批评新膳食指南</div>
@@ -93,7 +108,9 @@ Three Harvard faculty on the advisory committee raised concerns: guidelines prio
 <div class="card-takeaway-cn"><strong>要点：</strong> 可考虑哈佛的"健康饮食餐盘"作为循证替代指南。</div>
 <div class="card-source">Source/来源: <a href="https://hsph.harvard.edu/news/understanding-the-new-dietary-guidelines-for-americans/">Harvard T.H. Chan</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>📊 Half of Americans Plan New Diet</h4>
 <div class="card-title-cn">一半美国人计划新饮食</div>
@@ -107,7 +124,9 @@ Survey of 2,201 adults: 42% plan to cut calories, 28% will try low-carb, only 6%
 <div class="card-takeaway-cn"><strong>要点：</strong> 豆类、扁豆和全谷物是最实惠的蛋白质来源之一。</div>
 <div class="card-source">Source/来源: <a href="https://www.pcrm.org/news/news-releases/survey-half-us-adults-resolve-start-new-diet-2026">PCRM</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🫒 Mediterranean Diet Wins Again</h4>
 <div class="card-title-cn">地中海饮食再次胜出</div>
@@ -121,7 +140,9 @@ U.S. News survey: 69% of experts chose Mediterranean as most effective diet for 
 <div class="card-takeaway-cn"><strong>要点：</strong> 流行饮食来来去去——地中海饮食有数十年的研究支持。</div>
 <div class="card-source">Source/来源: <a href="https://health.usnews.com/wellness/articles/top-health-and-nutrition-trends-for-2026">U.S. News</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🧀 Full-Fat Cheese & Dementia</h4>
 <div class="card-title-cn">全脂奶酪与痴呆风险</div>
@@ -135,7 +156,9 @@ U.S. News survey: 69% of experts chose Mediterranean as most effective diet for 
 <div class="card-takeaway-cn"><strong>要点：</strong> 适量奶酪对大多数人来说没问题。关键词：适量。</div>
 <div class="card-source">Source/来源: <a href="https://www.theglobeandmail.com/life/health-and-fitness/article-healthy-eating-tips-diet-nutrition-2026/">Globe and Mail</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🌱 Plant Protein & Healthy Aging</h4>
 <div class="card-title-cn">植物蛋白与健康老龄化</div>
@@ -149,15 +172,22 @@ Tufts/Harvard study: women consuming most plant protein in their 40s-50s had 46%
 <div class="card-takeaway-cn"><strong>要点：</strong> 现在就开始优先摄入植物蛋白——对健康老龄化大有裨益。</div>
 <div class="card-source">Source/来源: <a href="https://www.theglobeandmail.com/life/health-and-fitness/article-healthy-eating-tips-diet-nutrition-2026/">Globe and Mail</a></div>
 </div>
+</div>
 
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
 </div>
 </div>
 
 <div class="news-date">January 11, 2026 <span class="date-cn">| 2026年1月11日</span></div>
-<p class="scroll-hint">Scroll for more</p>
-<div class="news-cards-container">
-<div class="news-cards">
 
+<div class="news-carousel">
+<div class="swiper news-swiper-3">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🏛️ New U.S. Dietary Guidelines</h4>
 <div class="card-title-cn">美国新膳食指南发布</div>
@@ -171,7 +201,9 @@ USDA/HHS released 2025-2030 guidelines. Key message: "eat real food." High-quali
 <div class="card-takeaway-cn"><strong>要点：</strong> 专注于天然、未加工的食物，而非包装产品。</div>
 <div class="card-source">Source/来源: <a href="https://www.usda.gov/about-usda/news/press-releases/2026/01/07/kennedy-rollins-unveil-historic-reset-us-nutrition-policy-put-real-food-back-center-health">USDA</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🔬 Safer Metabolism Boosters</h4>
 <div class="card-title-cn">更安全的代谢促进剂</div>
@@ -185,7 +217,9 @@ U. of Technology Sydney developed compounds that make cells burn more calories v
 <div class="card-takeaway-cn"><strong>要点：</strong> 有前景的研究方向，但仍处于实验阶段——尚无补充剂。</div>
 <div class="card-source">Source/来源: <a href="https://www.sciencedaily.com/releases/2026/01/260104202750.htm">ScienceDaily</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>⏰ Intermittent Fasting Questioned</h4>
 <div class="card-title-cn">间歇性禁食受质疑</div>
@@ -199,7 +233,9 @@ German Institute study: 31 women on different IF schedules saw no change in meta
 <div class="card-takeaway-cn"><strong>要点：</strong> 如果间歇性禁食能减少总摄入量则有帮助，但单靠时间控制并非神奇。</div>
 <div class="card-source">Source/来源: <a href="https://www.sciencealert.com/study-raises-serious-questions-about-the-benefits-of-intermittent-fasting">ScienceAlert</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>🐟 Omega-3 & Vitamin D for Aging</h4>
 <div class="card-title-cn">Omega-3和维生素D延缓衰老</div>
@@ -213,7 +249,9 @@ DO-HEALTH试验：每天1,000毫克DHA+EPA可能减缓70岁以上成年人的生
 <div class="card-takeaway-cn"><strong>要点：</strong> 这些补充剂对老年人有前景——请咨询医生。</div>
 <div class="card-source">Source/来源: <a href="https://www.theglobeandmail.com/life/health-and-fitness/article-healthy-eating-tips-diet-nutrition-2026/">Globe and Mail</a></div>
 </div>
+</div>
 
+<div class="swiper-slide">
 <div class="news-card">
 <h4>💊 GLP-1 Drugs Expanding Uses</h4>
 <div class="card-title-cn">GLP-1药物用途扩展</div>
@@ -227,7 +265,12 @@ Survey of 58 experts: GLP-1 meds (Wegovy, Ozempic) are 2026's top trend. 52% pre
 <div class="card-takeaway-cn"><strong>要点：</strong> GLP-1正在成为更广泛的治疗工具——请与医生讨论。</div>
 <div class="card-source">Source/来源: <a href="https://health.usnews.com/wellness/articles/top-health-and-nutrition-trends-for-2026">U.S. News</a></div>
 </div>
+</div>
 
+</div>
+<div class="swiper-pagination"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
 </div>
 </div>
 
@@ -242,3 +285,23 @@ Survey of 58 experts: GLP-1 meds (Wegovy, Ozempic) are 2026's top trend. 52% pre
 ---
 
 *Last updated | 最后更新: January 13, 2026 | 2026年1月13日*
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.swiper').forEach(function(el) {
+    new Swiper(el, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      grabCursor: true,
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev'),
+      },
+    });
+  });
+});
+</script>
