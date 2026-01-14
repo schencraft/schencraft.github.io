@@ -2,6 +2,8 @@
 
 Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page.
 
+**This skill runs fully automated** — no user confirmation required. It will search, curate, write, and publish in one go.
+
 ## Usage
 
 ```
@@ -25,24 +27,20 @@ Examples:
    - Based on credible research or expert sources
    - Relevant and actionable for general readers
    - Interesting and not overly technical
+   - **Proceed directly to updating the page — do not ask for user approval**
 
-3. **Present findings to user** before updating:
-   - Show a brief summary of each news item found
-   - Include the source for each
-   - Ask if they want to include all, select specific ones, or search for more
-
-4. **Check for month rollover** before updating:
+3. **Check for month rollover** before updating:
    - Read `_projects/nutrition-news.md` to check the current month of entries
    - If the current month differs from today's month:
      a. Archive the old content to `_projects/nutrition-news-YYYY-MM.md`
      b. Clear the main page content (keep intro and archive links)
      c. Add a link to the new archive in the "Past Updates" section
 
-5. **Update the main project page** at `_projects/nutrition-news.md`:
+4. **Update the main project page** at `_projects/nutrition-news.md`:
    - Add a new date section: `## Month Day, Year | YYYY年M月D日`
    - Add news items under that date in bilingual format
 
-6. **Format each news item with English AND Chinese**:
+5. **Format each news item with English AND Chinese**:
    ```markdown
    ### [English Title]
 
@@ -61,7 +59,7 @@ Examples:
    ---
    ```
 
-7. **Main page structure**:
+6. **Main page structure**:
    ```markdown
    ---
    title: "Nutrition News | 营养新闻"
@@ -88,25 +86,25 @@ Examples:
    *Last updated | 最后更新: [date]*
    ```
 
-8. **Archive page format** (`nutrition-news-YYYY-MM.md`):
+7. **Archive page format** (`nutrition-news-YYYY-MM.md`):
    - Same bilingual format as main page
    - Include back link: `[Back to current news | 返回最新](/projects/nutrition-news/)`
 
-9. **Translation guidelines**:
+8. **Translation guidelines**:
    - Use Simplified Chinese (简体中文)
    - Keep technical terms accurate (e.g., GLP-1, omega-3 can stay in English)
    - Translate naturally, not word-for-word
    - Maintain the same balanced, non-sensationalist tone
 
-10. **Important content guidelines**:
+9. **Important content guidelines**:
     - Always cite sources with links
     - Distinguish between preliminary research and established science
     - Include practical takeaways when possible
     - Note if studies are in animals vs humans, small sample sizes, etc.
 
-11. **Commit and push to GitHub** by running:
+10. **Commit and push to GitHub** by running:
     ```bash
     .claude/scripts/push-nutrition-news.sh "Add nutrition news for [Date] - [brief summary of items]"
     ```
 
-12. Confirm the push succeeded and share the live URL shown in the script output.
+11. Confirm the push succeeded and share the live URL shown in the script output.
