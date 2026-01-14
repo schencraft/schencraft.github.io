@@ -40,7 +40,7 @@ Examples:
    - Add a new date section with cards format (see below)
    - Insert AFTER the intro section `---` and BEFORE any existing date sections
 
-5. **Format as horizontal scrollable knowledge cards**:
+5. **Format as horizontal scrollable bilingual knowledge cards**:
 
    ```html
    <div class="news-date">Month Day, Year <span class="date-cn">| YYYY年M月D日</span></div>
@@ -49,12 +49,17 @@ Examples:
    <div class="news-cards">
 
    <div class="news-card">
-   <h4>🎯 Short Catchy Title</h4>
+   <h4>🎯 Short Catchy English Title</h4>
+   <div class="card-title-cn">中文标题</div>
    <div class="card-content">
-   Concise summary of the finding (2-4 sentences). Include key numbers/stats. Keep it scannable and informative.
+   English summary (2-3 sentences). Include key numbers/stats.
    </div>
-   <div class="card-takeaway"><strong>Takeaway:</strong> One actionable insight the reader can use.</div>
-   <div class="card-source">来源: <a href="URL">Source Name</a></div>
+   <div class="card-content-cn">
+   中文摘要（2-3句）。包含关键数据。
+   </div>
+   <div class="card-takeaway"><strong>Takeaway:</strong> English actionable insight.</div>
+   <div class="card-takeaway-cn"><strong>要点：</strong> 中文要点。</div>
+   <div class="card-source">Source/来源: <a href="URL">Source Name</a></div>
    </div>
 
    <!-- More cards... -->
@@ -64,17 +69,20 @@ Examples:
    ```
 
 6. **Card content guidelines**:
-   - **Title**: Use an emoji + short catchy title (max 5-6 words)
-   - **Content**: 2-4 sentences, include key numbers, keep scannable
-   - **Takeaway**: One practical, actionable insight
-   - **Source**: Use "来源:" (bilingual) with linked source name
-   - Use appropriate emojis: 🍊🥗☕🧪📋📊🫒🧀🌱🏛️🔬⏰🐟💊🧠💪🥦
+   - **Title**: Emoji + short English title (max 5-6 words)
+   - **Title CN**: Chinese translation of the title
+   - **Content**: 2-3 sentences in English, include key numbers
+   - **Content CN**: Chinese translation of the content
+   - **Takeaway**: English practical insight
+   - **Takeaway CN**: Chinese translation with `<strong>要点：</strong>`
+   - **Source**: Use "Source/来源:" with linked source name
+   - Emojis: 🍊🥗☕🧪📋📊🫒🧀🌱🏛️🔬⏰🐟💊🧠💪🥦
 
-7. **Translation approach for cards**:
-   - Cards use primarily English for scannability
-   - "来源:" is bilingual (Source/来源)
-   - Date header includes Chinese: `<span class="date-cn">| 2026年1月13日</span>`
-   - Keep technical terms in English (GLP-1, omega-3, etc.)
+7. **Translation guidelines**:
+   - Use Simplified Chinese (简体中文)
+   - Keep technical terms in English (GLP-1, omega-3, α-glucosidase)
+   - Translate naturally, not word-for-word
+   - Maintain balanced, non-sensationalist tone in both languages
 
 8. **Archive page format** (`nutrition-news-YYYY-MM.md`):
    - Same card format as main page
