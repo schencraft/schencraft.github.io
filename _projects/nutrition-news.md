@@ -11,6 +11,92 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 
 ---
 
+## January 13, 2026 | 2026年1月13日
+
+### Eating Vitamin C Can Physically Change Your Skin
+
+A University of Otago study published in the *Journal of Investigative Dermatology* found that dietary vitamin C travels through the bloodstream directly into skin layers, producing measurable structural changes.
+
+In a trial of 24 healthy adults, those who ate two SunGold kiwifruit daily for eight weeks (~250mg vitamin C) showed:
+- **Increased skin thickness** — indicating heightened collagen production
+- **Enhanced epidermal cell renewal**
+- Strong correlation between blood and skin vitamin C levels
+
+Importantly, dietary vitamin C proved more effective than topical creams. As lead researcher Professor Margreet Vissers noted, vitamin C "does not absorb well through the outer skin barrier" when applied topically, but skin cells efficiently absorb it from the bloodstream.
+
+**Key takeaway:** For skin health benefits, eat your vitamin C rather than just applying it. Aim for ~250mg daily from fresh fruits and vegetables like citrus, berries, kiwi, and broccoli.
+
+---
+
+**中文摘要：** 奥塔哥大学发表在《皮肤病学研究杂志》上的一项研究发现，膳食中的维生素C通过血液直接进入皮肤层，产生可测量的结构变化。在24名健康成年人的试验中，每天吃两个奇异果（约250毫克维生素C）持续八周的人显示出皮肤厚度增加（表明胶原蛋白生成增加）和表皮细胞更新增强。重要的是，膳食维生素C比外用护肤品更有效，因为皮肤从外部吸收维生素C的效果很差，但能有效地从血液中吸收。
+
+**关键要点：** 为了皮肤健康，应该通过饮食摄入维生素C，而不仅仅是外用。建议每天从柑橘、浆果、奇异果和西兰花等新鲜水果蔬菜中摄入约250毫克。
+
+*Source/来源: [ScienceDaily / Journal of Investigative Dermatology](https://www.sciencedaily.com/releases/2025/12/251226045343.htm)*
+
+---
+
+### Not All Plant-Based Diets Are Equal for Heart Health
+
+A major French study tracking 63,835 adults for an average of 9 years found that the cardiovascular benefits of plant-based eating depend heavily on food quality and processing level.
+
+**Key findings:**
+- High-quality, **minimally processed** plant foods → ~40% **lower** cardiovascular risk
+- **Ultra-processed** plant foods (chips, sugary cereals, sweetened drinks) → ~40% **higher** risk
+- Nutritionally superior but ultra-processed plant items showed **no benefit** compared to animal-based foods
+
+The researchers from INRAE, Inserm, and Université Sorbonne Paris Nord emphasized that understanding diet and heart health "requires considering the nutritional quality of foods and how heavily they are processed" — not just whether foods are plant or animal-based.
+
+**Key takeaway:** Going plant-based? Focus on whole foods like beans, lentils, nuts, and whole grains — not processed veggie burgers, chips, and sugary plant-based alternatives.
+
+---
+
+**中文摘要：** 一项追踪63,835名成年人平均9年的法国大型研究发现，植物性饮食的心血管益处在很大程度上取决于食物质量和加工程度。高质量、低加工的植物性食物可降低约40%的心血管风险；而超加工植物性食物（薯片、含糖谷物、甜饮料）则风险增加约40%。营养价值较高但超加工的植物性食品与动物性食品相比没有任何益处。
+
+**关键要点：** 选择植物性饮食？请专注于豆类、扁豆、坚果和全谷物等天然食物——而非加工的素食汉堡、薯片和含糖的植物性替代品。
+
+*Source/来源: [ScienceDaily / INRAE-Inserm Study](https://www.sciencedaily.com/releases/2025/12/251214100928.htm)*
+
+---
+
+### Coffee Compounds May Help Control Blood Sugar
+
+Roasted coffee may do more than provide a morning boost — researchers have discovered new compounds in coffee that inhibit α-glucosidase, a key enzyme involved in carbohydrate digestion and blood sugar regulation.
+
+Some of these newly identified coffee molecules were even more potent than previously known α-glucosidase inhibitors. This enzyme is a target for type 2 diabetes medications, as slowing its activity helps prevent blood sugar spikes after meals.
+
+**Key takeaway:** This is early research, but it adds to evidence that moderate coffee consumption may have metabolic benefits. Note that adding sugar and cream would likely counteract any blood sugar benefits.
+
+---
+
+**中文摘要：** 烘焙咖啡可能不仅仅提供早晨的提神效果——研究人员发现了咖啡中能抑制α-葡萄糖苷酶的新化合物，这是一种参与碳水化合物消化和血糖调节的关键酶。一些新发现的咖啡分子甚至比已知的α-葡萄糖苷酶抑制剂更有效。这种酶是2型糖尿病药物的靶点，因为减缓其活性有助于防止餐后血糖飙升。
+
+**关键要点：** 这是早期研究，但增加了适量饮用咖啡可能具有代谢益处的证据。请注意，添加糖和奶油可能会抵消任何血糖益处。
+
+*Source/来源: [ScienceDaily](https://www.sciencedaily.com/news/health_medicine/nutrition/)*
+
+---
+
+### Food Preservatives Linked to Higher Diabetes Risk
+
+A large study spanning more than a decade has found a concerning association between preservative additives and metabolic health.
+
+People with the **highest intake of preservative additives** were significantly more likely to develop type 2 diabetes compared to those with lower intake. The findings suggest that chemicals used to extend shelf life may have unintended metabolic consequences.
+
+This aligns with broader research showing that ultra-processed foods — which typically contain more preservatives — are associated with various health risks beyond just their nutritional profile.
+
+**Key takeaway:** Another reason to prioritize fresh, whole foods over packaged products with long ingredient lists. When buying packaged foods, shorter ingredient lists are generally better.
+
+---
+
+**中文摘要：** 一项跨越十多年的大型研究发现，防腐剂添加剂与代谢健康之间存在令人担忧的关联。防腐剂添加剂摄入量最高的人患2型糖尿病的可能性明显更高。研究结果表明，用于延长保质期的化学物质可能会产生意想不到的代谢后果。这与更广泛的研究一致，表明超加工食品（通常含有更多防腐剂）与各种健康风险相关。
+
+**关键要点：** 这是优先选择新鲜天然食物而非配料表冗长的包装食品的又一理由。购买包装食品时，配料表越短通常越好。
+
+*Source/来源: [ScienceDaily](https://www.sciencedaily.com/news/health_medicine/nutrition/)*
+
+---
+
 ## January 12, 2026 | 2026年1月12日
 
 ### Harvard Experts Raise Concerns About New Dietary Guidelines
@@ -237,4 +323,4 @@ The FDA also recently approved the first oral GLP-1 for weight loss (Wegovy pill
 
 ---
 
-*Last updated | 最后更新: January 12, 2026 | 2026年1月12日*
+*Last updated | 最后更新: January 13, 2026 | 2026年1月13日*
