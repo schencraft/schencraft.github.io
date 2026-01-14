@@ -1,6 +1,6 @@
 # Nutrition News
 
-Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page as Swiper.js card carousels.
+Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page as mobile-friendly cards.
 
 **This skill runs fully automated** — no user confirmation required. It will search, curate, write, and publish in one go.
 
@@ -37,52 +37,39 @@ Examples:
      c. Add a link to the new archive in the "Past Updates" section
 
 4. **Update the main project page** at `_projects/nutrition-news.md`:
-   - Add a new date section with Swiper carousel (see below)
+   - Add a new date section with cards grid (see format below)
    - Insert AFTER the intro `---` and BEFORE any existing date sections
 
-5. **Format as Swiper.js bilingual card carousel**:
+5. **Format as mobile-friendly card grid**:
 
    ```html
    <div class="news-date">Month Day, Year <span class="date-cn">| YYYY年M月D日</span></div>
 
-   <div class="news-carousel">
-   <div class="swiper news-swiper-[unique-id]">
-   <div class="swiper-wrapper">
+   <div class="news-cards">
 
-   <div class="swiper-slide">
    <div class="news-card">
    <h4>🎯 Short English Title</h4>
-   <div class="card-title-cn">中文标题</div>
-   <div class="card-content">
-   English summary (2-3 sentences). Include key numbers/stats.
-   </div>
-   <div class="card-content-cn">
-   中文摘要（2-3句）。包含关键数据。
-   </div>
-   <div class="card-takeaway"><strong>Takeaway:</strong> English insight.</div>
-   <div class="card-takeaway-cn"><strong>要点：</strong> 中文要点。</div>
-   <div class="card-source">Source/来源: <a href="URL">Source Name</a></div>
-   </div>
+   <div class="title-cn">中文标题</div>
+   <p>English summary (2-3 sentences). Include key numbers/stats.</p>
+   <div class="content-cn">中文摘要（2-3句）。包含关键数据。</div>
+   <div class="takeaway"><strong>Takeaway:</strong> English insight.</div>
+   <div class="takeaway-cn"><strong>要点：</strong> 中文要点。</div>
+   <div class="source">Source/来源: <a href="URL">Source Name</a></div>
    </div>
 
-   <!-- More slides... -->
+   <!-- More cards... -->
 
-   </div>
-   <div class="swiper-pagination"></div>
-   <div class="swiper-button-prev"></div>
-   <div class="swiper-button-next"></div>
-   </div>
    </div>
    ```
 
 6. **Card content guidelines**:
-   - **Title**: Emoji + short English title (max 5-6 words)
-   - **Title CN**: Chinese translation of the title
-   - **Content**: 2-3 sentences in English, include key numbers
-   - **Content CN**: Chinese translation of the content
-   - **Takeaway**: English practical insight
-   - **Takeaway CN**: Chinese translation with `<strong>要点：</strong>`
-   - **Source**: Use "Source/来源:" with linked source name
+   - **Title (h4)**: Emoji + short English title (max 5-6 words)
+   - **title-cn**: Chinese translation of the title
+   - **p**: 2-3 sentences in English, include key numbers
+   - **content-cn**: Chinese translation of the content
+   - **takeaway**: English practical insight with `<strong>Takeaway:</strong>`
+   - **takeaway-cn**: Chinese translation with `<strong>要点：</strong>`
+   - **source**: Use "Source/来源:" with linked source name
    - Emojis: 🍊🥗☕🧪📋📊🫒🧀🌱🏛️🔬⏰🐟💊🧠💪🥦
 
 7. **Translation guidelines**:
@@ -92,9 +79,8 @@ Examples:
    - Maintain balanced, non-sensationalist tone in both languages
 
 8. **Archive page format** (`nutrition-news-YYYY-MM.md`):
-   - Same Swiper format as main page
+   - Same card format as main page
    - Include back link: `[Back to current news | 返回最新](/projects/nutrition-news/)`
-   - Include the Swiper init script at the end
 
 9. **Important content guidelines**:
    - Always cite sources with links
@@ -103,32 +89,9 @@ Examples:
    - Note if studies are in animals vs humans, small sample sizes, etc.
    - Keep each card concise for easy scanning
 
-10. **Swiper init script** (already at bottom of page, no need to add again):
-    ```html
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.swiper').forEach(function(el) {
-        new Swiper(el, {
-          slidesPerView: 'auto',
-          spaceBetween: 16,
-          grabCursor: true,
-          pagination: {
-            el: el.querySelector('.swiper-pagination'),
-            clickable: true,
-          },
-          navigation: {
-            nextEl: el.querySelector('.swiper-button-next'),
-            prevEl: el.querySelector('.swiper-button-prev'),
-          },
-        });
-      });
-    });
-    </script>
-    ```
-
-11. **Commit and push to GitHub** by running:
+10. **Commit and push to GitHub** by running:
     ```bash
     .claude/scripts/push-nutrition-news.sh "Add nutrition news for [Date] - [brief summary of items]"
     ```
 
-12. Confirm the push succeeded and share the live URL shown in the script output.
+11. Confirm the push succeeded and share the live URL shown in the script output.
