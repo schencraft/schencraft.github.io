@@ -1,6 +1,6 @@
 # Nutrition News
 
-Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page.
+Research recent nutrition news and add bilingual (English/Chinese) updates to the Nutrition News project page as horizontal scrollable knowledge cards.
 
 **This skill runs fully automated** — no user confirmation required. It will search, curate, write, and publish in one go.
 
@@ -37,70 +37,55 @@ Examples:
      c. Add a link to the new archive in the "Past Updates" section
 
 4. **Update the main project page** at `_projects/nutrition-news.md`:
-   - Add a new date section: `## Month Day, Year | YYYY年M月D日`
-   - Add news items under that date in bilingual format
+   - Add a new date section with cards format (see below)
+   - Insert AFTER the intro section `---` and BEFORE any existing date sections
 
-5. **Format each news item with English AND Chinese**:
-   ```markdown
-   ### [English Title]
+5. **Format as horizontal scrollable knowledge cards**:
 
-   English summary of the finding/news.
+   ```html
+   <div class="news-date">Month Day, Year <span class="date-cn">| YYYY年M月D日</span></div>
+   <p class="scroll-hint">Scroll for more</p>
+   <div class="news-cards-container">
+   <div class="news-cards">
 
-   **Key takeaway:** English actionable insight.
+   <div class="news-card">
+   <h4>🎯 Short Catchy Title</h4>
+   <div class="card-content">
+   Concise summary of the finding (2-4 sentences). Include key numbers/stats. Keep it scannable and informative.
+   </div>
+   <div class="card-takeaway"><strong>Takeaway:</strong> One actionable insight the reader can use.</div>
+   <div class="card-source">来源: <a href="URL">Source Name</a></div>
+   </div>
 
-   ---
+   <!-- More cards... -->
 
-   **中文摘要：** Chinese translation of the summary.
-
-   **关键要点：** Chinese translation of the key takeaway.
-
-   *Source/来源: [Publication Name](url)*
-
-   ---
+   </div>
+   </div>
    ```
 
-6. **Main page structure**:
-   ```markdown
-   ---
-   title: "Nutrition News | 营养新闻"
-   description: "Curated updates on nutrition research | 营养研究精选更新"
-   tech: [Health, Research, Nutrition Science]
-   featured: true
-   ---
+6. **Card content guidelines**:
+   - **Title**: Use an emoji + short catchy title (max 5-6 words)
+   - **Content**: 2-4 sentences, include key numbers, keep scannable
+   - **Takeaway**: One practical, actionable insight
+   - **Source**: Use "来源:" (bilingual) with linked source name
+   - Use appropriate emojis: 🍊🥗☕🧪📋📊🫒🧀🌱🏛️🔬⏰🐟💊🧠💪🥦
 
-   A curated collection of the latest nutrition research...
+7. **Translation approach for cards**:
+   - Cards use primarily English for scannability
+   - "来源:" is bilingual (Source/来源)
+   - Date header includes Chinese: `<span class="date-cn">| 2026年1月13日</span>`
+   - Keep technical terms in English (GLP-1, omega-3, etc.)
 
-   最新营养研究、饮食指南和健康科学的精选更新。
-
-   ---
-
-   ## [Date entries with bilingual content]
-   ...
-
-   ---
-
-   ## Past Updates | 往期更新
-
-   - [January 2026 | 2026年1月](/projects/nutrition-news-2026-01/)
-
-   *Last updated | 最后更新: [date]*
-   ```
-
-7. **Archive page format** (`nutrition-news-YYYY-MM.md`):
-   - Same bilingual format as main page
+8. **Archive page format** (`nutrition-news-YYYY-MM.md`):
+   - Same card format as main page
    - Include back link: `[Back to current news | 返回最新](/projects/nutrition-news/)`
 
-8. **Translation guidelines**:
-   - Use Simplified Chinese (简体中文)
-   - Keep technical terms accurate (e.g., GLP-1, omega-3 can stay in English)
-   - Translate naturally, not word-for-word
-   - Maintain the same balanced, non-sensationalist tone
-
 9. **Important content guidelines**:
-    - Always cite sources with links
-    - Distinguish between preliminary research and established science
-    - Include practical takeaways when possible
-    - Note if studies are in animals vs humans, small sample sizes, etc.
+   - Always cite sources with links
+   - Distinguish between preliminary research and established science
+   - Include practical takeaways
+   - Note if studies are in animals vs humans, small sample sizes, etc.
+   - Keep each card concise — users scroll horizontally to see more
 
 10. **Commit and push to GitHub** by running:
     ```bash
