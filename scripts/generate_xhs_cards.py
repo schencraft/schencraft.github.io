@@ -54,57 +54,51 @@ class NewsCard:
     date: str
 
 
-# Color schemes
+# Color schemes - Airbnb-inspired
 STYLES = {
-    "morandi": {
-        "bg": "#F5F3EF",
+    "airbnb": {
+        "bg": "#FFFFFF",
         "card_bg": "#FFFFFF",
-        "accent": "#8B9A82",
-        "accent_light": "#E8EBE4",
-        "title": "#2D3436",
-        "text": "#4A5568",
-        "text_cn": "#636E72",
-        "takeaway_bg": "#F0EDE8",
-        "source": "#9CA3AF",
-        "emoji_bg": "#E8EBE4",
+        "black": "#222222",
+        "gray_dark": "#484848",
+        "gray": "#717171",
+        "gray_light": "#b0b0b0",
+        "gray_lighter": "#dddddd",
+        "gray_lightest": "#f7f7f7",
     },
-    "vibrant": {
-        "bg": "#FFF5F5",
+    "morandi": {
+        "bg": "#FFFFFF",
         "card_bg": "#FFFFFF",
-        "accent": "#E53E3E",
-        "accent_light": "#FED7D7",
-        "title": "#1A202C",
-        "text": "#4A5568",
-        "text_cn": "#718096",
-        "takeaway_bg": "#FFF5F5",
-        "source": "#A0AEC0",
-        "emoji_bg": "#FED7D7",
+        "black": "#2D3436",
+        "gray_dark": "#4A5568",
+        "gray": "#636E72",
+        "gray_light": "#9CA3AF",
+        "gray_lighter": "#E8EBE4",
+        "gray_lightest": "#F5F3EF",
     },
     "minimal": {
-        "bg": "#FAFAFA",
+        "bg": "#FFFFFF",
         "card_bg": "#FFFFFF",
-        "accent": "#1A202C",
-        "accent_light": "#E2E8F0",
-        "title": "#1A202C",
-        "text": "#4A5568",
-        "text_cn": "#718096",
-        "takeaway_bg": "#F7FAFC",
-        "source": "#A0AEC0",
-        "emoji_bg": "#EDF2F7",
+        "black": "#1A202C",
+        "gray_dark": "#4A5568",
+        "gray": "#718096",
+        "gray_light": "#A0AEC0",
+        "gray_lighter": "#E2E8F0",
+        "gray_lightest": "#F7FAFC",
     },
 }
 
 
-def generate_html(card: NewsCard, style: str = "morandi") -> str:
-    """Generate HTML for a single card."""
-    colors = STYLES.get(style, STYLES["morandi"])
+def generate_html(card: NewsCard, style: str = "airbnb") -> str:
+    """Generate HTML for a single card - Airbnb-inspired clean design."""
+    colors = STYLES.get(style, STYLES["airbnb"])
 
     html = f"""<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
 
         * {{
             margin: 0;
@@ -116,107 +110,93 @@ def generate_html(card: NewsCard, style: str = "morandi") -> str:
             width: {CARD_WIDTH}px;
             height: {CARD_HEIGHT}px;
             background: {colors['bg']};
-            font-family: 'Inter', 'Noto Sans SC', sans-serif;
-            padding: 48px;
+            font-family: 'Inter', 'Noto Sans SC', -apple-system, sans-serif;
+            padding: 72px;
             display: flex;
             flex-direction: column;
+            -webkit-font-smoothing: antialiased;
         }}
 
         .card {{
             background: {colors['card_bg']};
-            border-radius: 32px;
-            padding: 56px;
             flex: 1;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
         }}
 
-        .header {{
-            display: flex;
-            align-items: flex-start;
-            gap: 24px;
-            margin-bottom: 40px;
-        }}
-
-        .emoji-container {{
-            width: 88px;
-            height: 88px;
-            background: {colors['emoji_bg']};
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            flex-shrink: 0;
-        }}
-
-        .title-container {{
-            flex: 1;
+        .emoji {{
+            font-size: 56px;
+            margin-bottom: 32px;
         }}
 
         .title {{
-            font-size: 42px;
-            font-weight: 700;
-            color: {colors['title']};
-            line-height: 1.3;
-            margin-bottom: 12px;
+            font-size: 46px;
+            font-weight: 600;
+            color: {colors['black']};
+            line-height: 1.25;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }}
 
         .title-cn {{
-            font-size: 32px;
-            font-weight: 500;
-            color: {colors['text_cn']};
+            font-size: 34px;
+            font-weight: 400;
+            color: {colors['gray']};
             line-height: 1.4;
+            margin-bottom: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid {colors['gray_lighter']};
         }}
 
         .content {{
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 24px;
         }}
 
         .text {{
-            font-size: 28px;
-            line-height: 1.7;
-            color: {colors['text']};
+            font-size: 30px;
+            line-height: 1.75;
+            color: {colors['gray_dark']};
+            margin-bottom: 28px;
         }}
 
         .text-cn {{
             font-size: 26px;
-            line-height: 1.7;
-            color: {colors['text_cn']};
+            line-height: 1.75;
+            color: {colors['gray']};
+            padding-top: 28px;
+            border-top: 1px solid {colors['gray_lightest']};
         }}
 
         .takeaway {{
-            background: {colors['takeaway_bg']};
-            border-left: 5px solid {colors['accent']};
-            border-radius: 0 16px 16px 0;
-            padding: 28px 32px;
+            background: {colors['gray_lightest']};
+            border-radius: 16px;
+            padding: 36px 40px;
             margin-top: auto;
+            margin-bottom: 8px;
         }}
 
         .takeaway-label {{
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 600;
-            color: {colors['accent']};
+            color: {colors['gray']};
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
         }}
 
         .takeaway-text {{
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 500;
-            color: {colors['title']};
+            color: {colors['black']};
             line-height: 1.5;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }}
 
         .takeaway-cn {{
             font-size: 24px;
-            color: {colors['text_cn']};
+            color: {colors['gray']};
             line-height: 1.5;
         }}
 
@@ -224,37 +204,29 @@ def generate_html(card: NewsCard, style: str = "morandi") -> str:
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid {colors['accent_light']};
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid {colors['gray_lighter']};
         }}
 
         .source {{
             font-size: 20px;
-            color: {colors['source']};
+            color: {colors['gray_light']};
         }}
 
         .brand {{
             font-size: 20px;
             font-weight: 600;
-            color: {colors['accent']};
-        }}
-
-        .date {{
-            font-size: 18px;
-            color: {colors['source']};
+            color: {colors['black']};
+            letter-spacing: -0.01em;
         }}
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="header">
-            <div class="emoji-container">{card.emoji}</div>
-            <div class="title-container">
-                <div class="title">{card.title}</div>
-                <div class="title-cn">{card.title_cn}</div>
-            </div>
-        </div>
+        <div class="emoji">{card.emoji}</div>
+        <div class="title">{card.title}</div>
+        <div class="title-cn">{card.title_cn}</div>
 
         <div class="content">
             <div class="text">{card.content}</div>
@@ -385,8 +357,8 @@ def main():
     parser.add_argument('--output', '-o', type=str, default='./xhs_cards', help='Output directory')
     parser.add_argument('--date', '-d', type=str, help='Filter by date (YYYY-MM-DD)')
     parser.add_argument('--parse-md', type=str, help='Parse existing nutrition-news.md file')
-    parser.add_argument('--style', '-s', type=str, default='morandi',
-                        choices=['morandi', 'vibrant', 'minimal'], help='Card style')
+    parser.add_argument('--style', '-s', type=str, default='airbnb',
+                        choices=['airbnb', 'morandi', 'minimal'], help='Card style')
 
     args = parser.parse_args()
 
