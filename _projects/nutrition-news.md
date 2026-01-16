@@ -12,6 +12,72 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 ---
 
 <div class="news-date">
+  <span class="date-text">January 15, 2026 <span class="date-cn">| 2026年1月15日</span></span>
+  <button class="export-btn" onclick="exportAllCards('2026-01-15')">Export All</button>
+</div>
+
+<p class="scroll-hint">Swipe to see more cards</p>
+
+<div class="news-carousel">
+  <div class="swiper" id="swiper-2026-01-15">
+    <div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<div class="news-card" data-date="2026-01-15" data-emoji="🍈" data-title="Monk Fruit: More Than Sweetness" data-title-cn="罗汉果：不只是甜味剂">
+<h4>🍈 Monk Fruit: More Than Sweetness</h4>
+<div class="title-cn">罗汉果：不只是甜味剂</div>
+<p>New research reveals monk fruit's peel and pulp are rich in terpenoids, flavonoids, and amino acids with antioxidant properties. Different varieties have unique chemical profiles, offering varied health benefits beyond zero-calorie sweetening.</p>
+<div class="content-cn">新研究发现罗汉果的果皮和果肉富含萜类、黄酮类和氨基酸，具有抗氧化特性。不同品种具有独特的化学成分，除了零卡路里甜味外，还提供多样的健康益处。</div>
+<div class="takeaway"><strong>Takeaway:</strong> Monk fruit sweetener may offer benefits beyond sugar replacement—look for whole-fruit products.</div>
+<div class="takeaway-cn"><strong>要点：</strong> 罗汉果甜味剂可能提供替代糖之外的益处——可关注全果产品。</div>
+<div class="source">Source/来源: <a href="https://www.sciencedaily.com/releases/2026/01/260114084111.htm">Journal of the Science of Food and Agriculture</a></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div class="news-card" data-date="2026-01-15" data-emoji="🧬" data-title="Healthier Sugar from Bacteria" data-title-cn="细菌制造更健康的糖">
+<h4>🧬 Healthier Sugar from Bacteria</h4>
+<div class="title-cn">细菌制造更健康的糖</div>
+<p>Tufts scientists engineered E. coli bacteria to convert common glucose into tagatose—a rare sugar with 92% of sugar's sweetness but 60% fewer calories. The new method achieves up to 95% yield vs 40-77% with conventional methods.</p>
+<div class="content-cn">塔夫茨大学科学家利用工程化大肠杆菌将普通葡萄糖转化为塔格糖——一种具有92%蔗糖甜度但卡路里减少60%的稀有糖。新方法产量高达95%，远超传统方法的40-77%。</div>
+<div class="takeaway"><strong>Takeaway:</strong> Tagatose is FDA-approved and may support gut health—watch for it in future products.</div>
+<div class="takeaway-cn"><strong>要点：</strong> 塔格糖已获FDA批准，可能支持肠道健康——未来产品中值得关注。</div>
+<div class="source">Source/来源: <a href="https://www.sciencedaily.com/releases/2026/01/260112214302.htm">Cell Reports Physical Science</a></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div class="news-card" data-date="2026-01-15" data-emoji="🦷" data-title="Amino Acid Fights Cavities" data-title-cn="氨基酸对抗蛀牙">
+<h4>🦷 Amino Acid Fights Cavities</h4>
+<div class="title-cn">氨基酸对抗蛀牙</div>
+<p>Clinical trial shows arginine, a natural amino acid, neutralizes tooth-damaging acids and reshapes dental plaque to be less harmful. It works synergistically with fluoride and is safe for children.</p>
+<div class="content-cn">临床试验表明，精氨酸这种天然氨基酸能中和损害牙齿的酸性物质，并重塑牙菌斑使其危害降低。它与氟化物协同作用，对儿童也是安全的。</div>
+<div class="takeaway"><strong>Takeaway:</strong> Look for arginine in toothpaste—especially helpful for cavity-prone individuals.</div>
+<div class="takeaway-cn"><strong>要点：</strong> 可关注含精氨酸的牙膏——对易蛀牙人群特别有帮助。</div>
+<div class="source">Source/来源: <a href="https://www.sciencedaily.com/releases/2026/01/260108231335.htm">Aarhus University</a></div>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div class="news-card" data-date="2026-01-15" data-emoji="⚠️" data-title="Dietitians Question New Pyramid" data-title-cn="营养师质疑新膳食金字塔">
+<h4>⚠️ Dietitians Question New Pyramid</h4>
+<div class="title-cn">营养师质疑新膳食金字塔</div>
+<p>Registered dietitians criticize the inverted food pyramid placing meat and full-fat dairy at the top. Stanford's Christopher Gardner says it "goes against decades of evidence." AHA supports the vegetable/fruit emphasis but warns about sodium from seasoning.</p>
+<div class="content-cn">注册营养师批评将肉类和全脂乳制品置于顶端的倒置食物金字塔。斯坦福大学的Christopher Gardner表示这"违背了数十年的证据"。美国心脏协会支持强调蔬果，但警告调味料带来的钠摄入问题。</div>
+<div class="takeaway"><strong>Takeaway:</strong> Consider Mediterranean diet or Harvard's Healthy Eating Plate as evidence-based alternatives.</div>
+<div class="takeaway-cn"><strong>要点：</strong> 可考虑地中海饮食或哈佛健康饮食餐盘作为循证替代方案。</div>
+<div class="source">Source/来源: <a href="https://www.statnews.com/2026/01/13/new-food-pyramid-saturated-fats-dietitian/">STAT News</a></div>
+</div>
+</div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<div class="news-date">
   <span class="date-text">January 13, 2026 <span class="date-cn">| 2026年1月13日</span></span>
   <button class="export-btn" onclick="exportAllCards('2026-01-13')">Export All</button>
 </div>
@@ -243,7 +309,7 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 
 ---
 
-*Last updated | 最后更新: January 13, 2026 | 2026年1月13日*
+*Last updated | 最后更新: January 15, 2026 | 2026年1月15日*
 
 <!-- XHS Export Container (hidden) -->
 <div class="xhs-card-container" id="xhs-container"></div>

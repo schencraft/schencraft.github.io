@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "emoji": "🍊",
+      "title": "Vitamin C Changes Skin Structure",
+      "title_cn": "维生素C改变皮肤结构",
+      "content": "Dietary vitamin C travels through blood directly into skin layers, increasing thickness (more collagen) and enhancing cell renewal. Eating 2 kiwifruit daily (~250mg) for 8 weeks showed measurable improvements.",
+      "content_cn": "膳食维生素C通过血液直接进入皮肤层，增加厚度（更多胶原蛋白）并促进细胞更新。每天吃2个奇异果（约250毫克）持续8周显示出可测量的改善。",
+      "takeaway": "Eat vitamin C from fruits & veggies rather than just applying creams.",
+      "takeaway_cn": "通过水果蔬菜摄入维生素C，而不仅仅是涂抹护肤品。",
+      "source": "Journal of Investigative Dermatology",
+      "source_url": "https://www.sciencedaily.com/releases/2025/12/251226045343.htm",
+      "date": "2026-01-13"
+    },
+    {
+      "emoji": "🥗",
+      "title": "Not All Plant Diets Equal",
+      "title_cn": "并非所有植物饮食都一样",
+      "content": "Study of 63,835 adults over 9 years: minimally processed plant foods cut heart risk ~40%, but ultra-processed plant foods (chips, sugary cereals) increased risk ~40%.",
+      "content_cn": "对63,835名成年人进行9年的研究：低加工植物性食物降低心脏病风险约40%，但超加工植物性食物（薯片、含糖谷物）增加风险约40%。",
+      "takeaway": "Choose whole foods (beans, lentils, nuts) over processed veggie alternatives.",
+      "takeaway_cn": "选择天然食物（豆类、扁豆、坚果）而非加工的素食替代品。",
+      "source": "INRAE-Inserm Study",
+      "source_url": "https://www.sciencedaily.com/releases/2025/12/251214100928.htm",
+      "date": "2026-01-13"
+    }
+  ]
+}
