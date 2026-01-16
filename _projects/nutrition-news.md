@@ -12,7 +12,7 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 ---
 
 <div class="news-date">
-  <span class="date-text">January 15, 2026 <span class="date-cn">| 2026年1月15日</span></span>
+  <span class="date-text">January 15, 2026</span><span class="date-cn">1月15日</span>
   <button class="export-btn" onclick="exportAllCards('2026-01-15')">Export All</button>
 </div>
 
@@ -78,7 +78,7 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 </div>
 
 <div class="news-date">
-  <span class="date-text">January 13, 2026 <span class="date-cn">| 2026年1月13日</span></span>
+  <span class="date-text">January 13, 2026</span><span class="date-cn">1月13日</span>
   <button class="export-btn" onclick="exportAllCards('2026-01-13')">Export All</button>
 </div>
 
@@ -144,7 +144,7 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 </div>
 
 <div class="news-date">
-  <span class="date-text">January 12, 2026 <span class="date-cn">| 2026年1月12日</span></span>
+  <span class="date-text">January 12, 2026</span><span class="date-cn">1月12日</span>
   <button class="export-btn" onclick="exportAllCards('2026-01-12')">Export All</button>
 </div>
 
@@ -222,7 +222,7 @@ A curated collection of the latest nutrition research, dietary guidelines, and h
 </div>
 
 <div class="news-date">
-  <span class="date-text">January 11, 2026 <span class="date-cn">| 2026年1月11日</span></span>
+  <span class="date-text">January 11, 2026</span><span class="date-cn">1月11日</span>
   <button class="export-btn" onclick="exportAllCards('2026-01-11')">Export All</button>
 </div>
 

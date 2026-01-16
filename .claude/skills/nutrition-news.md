@@ -45,7 +45,7 @@ Examples:
 
    ```html
    <div class="news-date">
-     <span class="date-text">January 15, 2026 <span class="date-cn">| 2026年1月15日</span></span>
+     <span class="date-text">January 15, 2026</span><span class="date-cn">1月15日</span>
      <button class="export-btn" onclick="exportAllCards('2026-01-15')">Export All</button>
    </div>
 
