@@ -7,9 +7,9 @@ layout: default
     <p class="archive-description">{{ content }}</p>
   </header>
 
-  <div class="archive-controls">
+  <div class="archive-controls" id="archive-controls">
     <div class="search-box">
-      <input type="text" id="search-input" placeholder="Search by guest name..." autocomplete="off">
+      <input type="text" id="search-input" placeholder="Search guests, topics, or titles..." autocomplete="off">
     </div>
 
     <div class="filter-controls">
@@ -33,6 +33,8 @@ layout: default
         <option value="views">Most Viewed</option>
         <option value="guest">A-Z by Guest</option>
       </select>
+
+      <button class="reset-btn" id="reset-btn" style="display: none;">Reset</button>
     </div>
   </div>
 
@@ -51,16 +53,18 @@ layout: default
              data-views="{{ transcript.view_count | default: 0 }}">
       <a href="{{ transcript.url | relative_url }}" class="card-link">
         <div class="card-thumb">
+          <div class="skeleton-loader"></div>
           <img src="https://img.youtube.com/vi/{{ transcript.video_id }}/mqdefault.jpg"
                alt="{{ transcript.guest }}"
-               loading="lazy">
+               loading="lazy"
+               onload="this.parentElement.classList.add('loaded')">
           <span class="duration">{{ transcript.duration }}</span>
         </div>
         <div class="card-content">
           <h3 class="card-guest">{{ transcript.guest }}</h3>
           <p class="card-title">{{ transcript.title | truncate: 80 }}</p>
           <div class="card-meta">
-            <span class="meta-date">{{ transcript.publish_date | date: "%b %Y" }}</span>
+            <span class="meta-date">{{ transcript.publish_date | date: "%b %-d, %Y" }}</span>
             {% if transcript.view_count and transcript.view_count > 0 %}
               {% if transcript.view_count >= 1000000 %}
             <span class="meta-views">{{ transcript.view_count | divided_by: 1000000.0 | round: 1 }}M views</span>
@@ -95,16 +99,35 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('search-input');
   const topicFilter = document.getElementById('topic-filter');
   const sortSelect = document.getElementById('sort-select');
+  const resetBtn = document.getElementById('reset-btn');
   const grid = document.getElementById('transcript-grid');
   const cards = Array.from(document.querySelectorAll('.transcript-card'));
   const showingCount = document.getElementById('showing-count');
   const noResults = document.getElementById('no-results');
+  const controls = document.getElementById('archive-controls');
+
+  // Sticky filter bar on scroll
+  let lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 200) {
+      controls.classList.add('sticky');
+    } else {
+      controls.classList.remove('sticky');
+    }
+    lastScroll = currentScroll;
+  });
 
   // Check URL params for initial filter
   const urlParams = new URLSearchParams(window.location.search);
   const topicParam = urlParams.get('topic');
   if (topicParam) {
     topicFilter.value = topicParam;
+  }
+
+  function updateResetButton() {
+    const hasFilters = searchInput.value || topicFilter.value || sortSelect.value !== 'date-desc';
+    resetBtn.style.display = hasFilters ? 'inline-block' : 'none';
   }
 
   function filterAndSort() {
@@ -119,7 +142,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const matchesSearch = !searchTerm ||
         guest.includes(searchTerm) ||
-        title.includes(searchTerm);
+        title.includes(searchTerm) ||
+        topics.some(t => t.toLowerCase().includes(searchTerm));
 
       const matchesTopic = !selectedTopic ||
         topics.includes(selectedTopic);
@@ -152,9 +176,10 @@ document.addEventListener('DOMContentLoaded', function() {
       card.style.display = visibleCards.includes(card) ? 'block' : 'none';
     });
 
-    // Update count
+    // Update count and reset button
     showingCount.textContent = visibleCards.length;
     noResults.style.display = visibleCards.length === 0 ? 'block' : 'none';
+    updateResetButton();
   }
 
   searchInput.addEventListener('input', filterAndSort);
@@ -172,6 +197,10 @@ document.addEventListener('DOMContentLoaded', function() {
     topicFilter.value = '';
     sortSelect.value = 'date-desc';
     filterAndSort();
+    // Update URL
+    window.history.replaceState({}, '', window.location.pathname);
   };
+
+  resetBtn.addEventListener('click', resetFilters);
 });
 </script>

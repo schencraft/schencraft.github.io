@@ -6,7 +6,8 @@ layout: default
     {% if page.video_id %}
     <div class="video-embed">
       <iframe
-        src="https://www.youtube.com/embed/{{ page.video_id }}"
+        id="youtube-player"
+        src="https://www.youtube.com/embed/{{ page.video_id }}?enablejsapi=1"
         title="{{ page.title }}"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -46,6 +47,7 @@ layout: default
   <div class="transcript-body">
     <div class="transcript-controls">
       <button id="toggle-transcript" class="transcript-toggle">Hide Transcript</button>
+      <button id="share-btn" class="share-btn">Share Quote</button>
     </div>
 
     <div class="transcript-content" id="transcript-content">
@@ -55,16 +57,74 @@ layout: default
     </div>
   </div>
 
+  <!-- Related Episodes -->
+  {% if page.topics %}
+  <section class="related-episodes">
+    <h2>Related Episodes</h2>
+    <div class="related-grid">
+      {% assign current_slug = page.slug %}
+      {% assign related_count = 0 %}
+      {% assign sorted_transcripts = site.transcripts | sort: "view_count" | reverse %}
+      {% for transcript in sorted_transcripts %}
+        {% if transcript.slug != current_slug and related_count < 4 %}
+          {% assign has_match = false %}
+          {% for topic in page.topics %}
+            {% if transcript.topics contains topic %}
+              {% assign has_match = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% if has_match %}
+            {% assign related_count = related_count | plus: 1 %}
+      <a href="{{ transcript.url | relative_url }}" class="related-card">
+        <div class="related-thumb">
+          <img src="https://img.youtube.com/vi/{{ transcript.video_id }}/mqdefault.jpg"
+               alt="{{ transcript.guest }}" loading="lazy">
+        </div>
+        <div class="related-info">
+          <h4>{{ transcript.guest }}</h4>
+          <p>{{ transcript.title | truncate: 60 }}</p>
+        </div>
+      </a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <nav class="transcript-nav">
     <a href="{{ '/transcripts/' | relative_url }}" class="back-link">Back to All Episodes</a>
   </nav>
 </article>
 
+<!-- Share Modal -->
+<div id="share-modal" class="share-modal" style="display: none;">
+  <div class="share-modal-content">
+    <button class="share-close" id="share-close">&times;</button>
+    <h3>Share Quote</h3>
+    <div class="share-quote" id="share-quote-text"></div>
+    <div class="share-buttons">
+      <button id="copy-quote" class="share-action">Copy Text</button>
+      <a id="twitter-share" href="#" target="_blank" class="share-action twitter">Share on X</a>
+    </div>
+    <p class="share-hint">Select text in the transcript, then click "Share Quote"</p>
+  </div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const toggleBtn = document.getElementById('toggle-transcript');
   const content = document.getElementById('transcript-content');
+  const transcriptText = document.getElementById('transcript-text');
+  const shareBtn = document.getElementById('share-btn');
+  const shareModal = document.getElementById('share-modal');
+  const shareClose = document.getElementById('share-close');
+  const shareQuoteText = document.getElementById('share-quote-text');
+  const copyQuote = document.getElementById('copy-quote');
+  const twitterShare = document.getElementById('twitter-share');
 
+  // Toggle transcript
   toggleBtn.addEventListener('click', function() {
     if (content.style.display === 'none') {
       content.style.display = 'block';
@@ -72,6 +132,77 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       content.style.display = 'none';
       toggleBtn.textContent = 'Show Full Transcript';
+    }
+  });
+
+  // Parse and make timestamps clickable
+  function makeTimestampsClickable() {
+    const html = transcriptText.innerHTML;
+    const timestampRegex = /\((\d{1,2}):(\d{2}):(\d{2})\)/g;
+
+    const newHtml = html.replace(timestampRegex, function(match, h, m, s) {
+      const totalSeconds = parseInt(h) * 3600 + parseInt(m) * 60 + parseInt(s);
+      return `<a href="#" class="timestamp-link" data-time="${totalSeconds}">(${h}:${m}:${s})</a>`;
+    });
+
+    transcriptText.innerHTML = newHtml;
+  }
+
+  makeTimestampsClickable();
+
+  // Handle timestamp clicks
+  transcriptText.addEventListener('click', function(e) {
+    if (e.target.classList.contains('timestamp-link')) {
+      e.preventDefault();
+      const time = parseInt(e.target.dataset.time);
+      const iframe = document.getElementById('youtube-player');
+      if (iframe) {
+        iframe.src = iframe.src.split('?')[0] + '?start=' + time + '&autoplay=1&enablejsapi=1';
+        iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+
+  // Share quote functionality
+  shareBtn.addEventListener('click', function() {
+    const selection = window.getSelection().toString().trim();
+    if (selection) {
+      shareQuoteText.textContent = '"' + selection + '"';
+      const pageUrl = window.location.href;
+      const guest = '{{ page.guest }}';
+      const tweetText = encodeURIComponent(selection.substring(0, 200) + (selection.length > 200 ? '...' : '') + ' - ' + guest + ' on Lenny\'s Podcast');
+      twitterShare.href = 'https://twitter.com/intent/tweet?text=' + tweetText + '&url=' + encodeURIComponent(pageUrl);
+      shareModal.style.display = 'flex';
+    } else {
+      shareQuoteText.textContent = 'Select some text from the transcript first.';
+      shareModal.style.display = 'flex';
+    }
+  });
+
+  shareClose.addEventListener('click', function() {
+    shareModal.style.display = 'none';
+  });
+
+  shareModal.addEventListener('click', function(e) {
+    if (e.target === shareModal) {
+      shareModal.style.display = 'none';
+    }
+  });
+
+  copyQuote.addEventListener('click', function() {
+    const text = shareQuoteText.textContent;
+    navigator.clipboard.writeText(text + '\n\n- {{ page.guest }} on Lenny\'s Podcast\n' + window.location.href).then(function() {
+      copyQuote.textContent = 'Copied!';
+      setTimeout(function() {
+        copyQuote.textContent = 'Copy Text';
+      }, 2000);
+    });
+  });
+
+  // Keyboard shortcut to close modal
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && shareModal.style.display === 'flex') {
+      shareModal.style.display = 'none';
     }
   });
 });
