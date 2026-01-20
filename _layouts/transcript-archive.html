@@ -15,15 +15,15 @@ layout: default
     <div class="filter-controls">
       <select id="topic-filter">
         <option value="">All Topics</option>
-        {% assign all_keywords = "" | split: "" %}
+        {% assign all_topics = "" | split: "" %}
         {% for transcript in site.transcripts %}
-          {% for keyword in transcript.keywords %}
-            {% assign all_keywords = all_keywords | push: keyword %}
+          {% for topic in transcript.topics %}
+            {% assign all_topics = all_topics | push: topic %}
           {% endfor %}
         {% endfor %}
-        {% assign unique_keywords = all_keywords | uniq | sort %}
-        {% for keyword in unique_keywords %}
-        <option value="{{ keyword }}">{{ keyword | capitalize | replace: "-", " " }}</option>
+        {% assign unique_topics = all_topics | uniq | sort %}
+        {% for topic in unique_topics %}
+        <option value="{{ topic }}">{{ topic }}</option>
         {% endfor %}
       </select>
 
@@ -46,7 +46,7 @@ layout: default
     <article class="transcript-card"
              data-guest="{{ transcript.guest | downcase }}"
              data-title="{{ transcript.title | downcase }}"
-             data-topics="{{ transcript.keywords | join: ',' }}"
+             data-topics="{{ transcript.topics | join: ',' }}"
              data-date="{{ transcript.publish_date | date: '%Y-%m-%d' }}"
              data-views="{{ transcript.view_count | default: 0 }}">
       <a href="{{ transcript.url | relative_url }}" class="card-link">
@@ -61,14 +61,20 @@ layout: default
           <p class="card-title">{{ transcript.title | truncate: 80 }}</p>
           <div class="card-meta">
             <span class="meta-date">{{ transcript.publish_date | date: "%b %Y" }}</span>
-            {% if transcript.view_count %}
-            <span class="meta-views">{{ transcript.view_count | divided_by: 1000 }}K views</span>
+            {% if transcript.view_count and transcript.view_count > 0 %}
+              {% if transcript.view_count >= 1000000 %}
+            <span class="meta-views">{{ transcript.view_count | divided_by: 1000000.0 | round: 1 }}M views</span>
+              {% elsif transcript.view_count >= 1000 %}
+            <span class="meta-views">{{ transcript.view_count | divided_by: 1000.0 | round: 1 }}K views</span>
+              {% else %}
+            <span class="meta-views">{{ transcript.view_count }} views</span>
+              {% endif %}
             {% endif %}
           </div>
-          {% if transcript.keywords %}
+          {% if transcript.topics %}
           <div class="card-topics">
-            {% for keyword in transcript.keywords limit: 3 %}
-            <span class="topic-tag-small">{{ keyword | replace: "-", " " }}</span>
+            {% for topic in transcript.topics limit: 3 %}
+            <span class="topic-tag-small">{{ topic }}</span>
             {% endfor %}
           </div>
           {% endif %}
