@@ -4,49 +4,204 @@
 @import "minima";
 
 // ========================================
-// Airbnb-Inspired Design System
-// Clean, warm, human, content-focused
+// Editorial Magazine Design System
+// Elegant, refined, artistic typography
 // ========================================
 
-// Color palette - warm and approachable
-$color-black: #222222;
-$color-gray-dark: #484848;
-$color-gray: #717171;
-$color-gray-light: #b0b0b0;
-$color-gray-lighter: #dddddd;
-$color-gray-lightest: #f7f7f7;
+// Color palette - sophisticated and timeless
+$color-black: #1a1a1a;
+$color-gray-dark: #3d3d3d;
+$color-gray: #6b6b6b;
+$color-gray-light: #9a9a9a;
+$color-gray-lighter: #e0e0e0;
+$color-gray-lightest: #f5f5f5;
 $color-white: #ffffff;
-$color-accent: #FF385C;  // Airbnb coral - use sparingly
-$color-accent-light: #fff0f3;
+$color-accent: #c9a227;  // Warm gold - editorial elegance
+$color-accent-dark: #a68521;
+$color-cream: #faf8f5;   // Warm paper tone
 
-// Typography
+// Dark mode colors
+$dark-bg: #121212;
+$dark-surface: #1e1e1e;
+$dark-surface-2: #2a2a2a;
+$dark-text: #e8e8e8;
+$dark-text-secondary: #a0a0a0;
+$dark-border: #3a3a3a;
+$dark-accent: #d4af37;
+
+// Typography - Editorial Style
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   color: $color-black;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-white;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-weight: 600;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
   color: $color-black;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+
+  @media (max-width: 640px) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 code, pre {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  font-size: 0.9em;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 0.875em;
+}
+
+a {
+  color: $color-black;
+  text-decoration-color: $color-accent;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-accent-dark;
+  }
 }
 
 .post-content {
-  line-height: 1.75;
+  line-height: 1.8;
   color: $color-gray-dark;
+  font-size: 1.0625rem;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  blockquote {
+    border-left: 3px solid $color-accent;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: $color-gray;
+  }
 }
 
 .site-title {
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
-  letter-spacing: -0.5px;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.site-header {
+  border-bottom: 1px solid $color-gray-lighter;
+}
+
+.site-nav .page-link {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+}
+
+// Post list styling
+.post-list {
+  h3 {
+    font-size: 1.375rem;
+    margin-bottom: 0.25rem;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $color-accent-dark;
+      }
+    }
+  }
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: $color-gray;
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+// ========================================
+// Dark Mode (System Preference)
+// ========================================
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-text;
+  }
+
+  a {
+    color: $dark-text;
+    text-decoration-color: $dark-accent;
+
+    &:hover {
+      color: $dark-accent;
+    }
+  }
+
+  .post-content {
+    color: $dark-text-secondary;
+
+    blockquote {
+      border-left-color: $dark-accent;
+      color: $dark-text-secondary;
+    }
+  }
+
+  .site-header {
+    border-bottom-color: $dark-border;
+    background-color: $dark-bg;
+  }
+
+  .site-title,
+  .site-nav .page-link {
+    color: $dark-text;
+  }
+
+  .post-meta {
+    color: $dark-text-secondary;
+  }
+
+  .post-list h3 a {
+    color: $dark-text;
+
+    &:hover {
+      color: $dark-accent;
+    }
+  }
+
+  code, pre {
+    background-color: $dark-surface-2;
+  }
+
+  .site-footer {
+    border-top-color: $dark-border;
+    background-color: $dark-bg;
+    color: $dark-text-secondary;
+  }
 }
 
 // ========================================
@@ -1093,189 +1248,256 @@ code, pre {
   text-align: center;
 }
 
-// Dark mode for transcripts
+// Dark mode for components
 @media (prefers-color-scheme: dark) {
+  // Nutrition News
+  .news-date {
+    border-color: $dark-border;
+    .date-text { color: $dark-text; }
+    .date-cn { color: $dark-text-secondary; }
+  }
+
+  .export-btn {
+    background: transparent;
+    color: $dark-text;
+    border-color: $dark-text;
+
+    &:hover {
+      background: $dark-text;
+      color: $dark-bg;
+    }
+  }
+
+  .news-card {
+    background: $dark-surface;
+    border-color: $dark-border;
+
+    h4 { color: $dark-text; }
+    .title-cn { color: $dark-text-secondary; }
+    p { color: $dark-text-secondary; }
+    .content-cn {
+      color: $dark-text-secondary;
+      border-top-color: $dark-border;
+    }
+    .takeaway {
+      background: $dark-surface-2;
+      color: $dark-text-secondary;
+      strong { color: $dark-text; }
+    }
+    .takeaway-cn {
+      background: transparent;
+      border-color: $dark-border;
+      color: $dark-text-secondary;
+      strong { color: $dark-text-secondary; }
+    }
+    .source {
+      color: $dark-text-secondary;
+      a {
+        color: $dark-text-secondary;
+        &:hover { color: $dark-text; }
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: $dark-text;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $dark-text;
+  }
+
+  // Transcript Archive
   .archive-header .archive-description {
-    color: #b0b0b0;
+    color: $dark-text-secondary;
   }
 
   .search-box input {
-    background: #1a1a1a;
-    border-color: #333;
-    color: #f7f7f7;
+    background: $dark-surface;
+    border-color: $dark-border;
+    color: $dark-text;
 
     &:focus {
-      border-color: #f7f7f7;
+      border-color: $dark-accent;
     }
 
     &::placeholder {
-      color: #717171;
+      color: $dark-text-secondary;
     }
   }
 
   .filter-controls select {
-    background: #1a1a1a;
-    border-color: #333;
-    color: #f7f7f7;
+    background: $dark-surface;
+    border-color: $dark-border;
+    color: $dark-text;
 
     &:focus {
-      border-color: #f7f7f7;
+      border-color: $dark-accent;
     }
   }
 
   .transcript-card {
-    background: #1a1a1a;
-    border-color: #333;
+    background: $dark-surface;
+    border-color: $dark-border;
 
-    .card-guest { color: #f7f7f7; }
-    .card-title { color: #b0b0b0; }
-    .card-meta { color: #717171; }
-    .card-thumb { background: #262626; }
+    .card-guest { color: $dark-text; }
+    .card-title { color: $dark-text-secondary; }
+    .card-meta { color: $dark-text-secondary; }
+    .card-thumb { background: $dark-surface-2; }
   }
 
   .topic-tag,
   .topic-tag-small {
-    background: #262626;
-    color: #dddddd;
+    background: $dark-surface-2;
+    color: $dark-text-secondary;
 
     &:hover {
-      background: #333;
+      background: $dark-border;
+      color: $dark-text;
     }
   }
 
   .no-results button {
     background: transparent;
-    border-color: #f7f7f7;
-    color: #f7f7f7;
+    border-color: $dark-text;
+    color: $dark-text;
 
     &:hover {
-      background: #f7f7f7;
-      color: #222;
+      background: $dark-text;
+      color: $dark-bg;
     }
   }
 
   .video-embed {
-    background: #262626;
+    background: $dark-surface-2;
   }
 
   .transcript-title {
-    color: #b0b0b0;
+    color: $dark-text-secondary;
   }
 
   .transcript-body {
-    border-top-color: #333;
+    border-top-color: $dark-border;
   }
 
   .transcript-toggle {
     background: transparent;
-    border-color: #f7f7f7;
-    color: #f7f7f7;
+    border-color: $dark-text;
+    color: $dark-text;
 
     &:hover {
-      background: #f7f7f7;
-      color: #222;
+      background: $dark-text;
+      color: $dark-bg;
     }
   }
 
   .transcript-content {
-    color: #dddddd;
+    color: $dark-text-secondary;
 
     .speaker strong {
-      color: #f7f7f7;
+      color: $dark-text;
     }
   }
 
   .transcript-nav {
-    border-top-color: #333;
+    border-top-color: $dark-border;
   }
 
   .archive-controls {
-    background: #1a1a1a;
+    background: $dark-bg;
 
     &.sticky {
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
   }
 
   .reset-btn {
     background: transparent;
-    border-color: #333;
-    color: #b0b0b0;
+    border-color: $dark-border;
+    color: $dark-text-secondary;
 
     &:hover {
-      border-color: #f7f7f7;
-      color: #f7f7f7;
+      border-color: $dark-text;
+      color: $dark-text;
     }
   }
 
   .share-btn {
     background: transparent;
-    border-color: #333;
-    color: #b0b0b0;
+    border-color: $dark-border;
+    color: $dark-text-secondary;
 
     &:hover {
-      border-color: #f7f7f7;
-      color: #f7f7f7;
+      border-color: $dark-text;
+      color: $dark-text;
     }
   }
 
   .timestamp-link {
-    color: #FF385C;
+    color: $dark-accent;
   }
 
   .related-episodes {
-    border-top-color: #333;
+    border-top-color: $dark-border;
   }
 
   .related-thumb {
-    background: #262626;
+    background: $dark-surface-2;
   }
 
   .related-info {
-    h4 { color: #f7f7f7; }
-    p { color: #b0b0b0; }
+    h4 { color: $dark-text; }
+    p { color: $dark-text-secondary; }
   }
 
   .share-modal-content {
-    background: #1a1a1a;
+    background: $dark-surface;
 
-    h3 { color: #f7f7f7; }
+    h3 { color: $dark-text; }
   }
 
   .share-close {
-    color: #717171;
+    color: $dark-text-secondary;
 
-    &:hover { color: #f7f7f7; }
+    &:hover { color: $dark-text; }
   }
 
   .share-quote {
-    background: #262626;
-    color: #dddddd;
+    background: $dark-surface-2;
+    color: $dark-text-secondary;
   }
 
   .share-action {
     &:first-child {
-      background: #f7f7f7;
-      color: #222;
-      border-color: #f7f7f7;
+      background: $dark-text;
+      color: $dark-bg;
+      border-color: $dark-text;
 
-      &:hover { background: #dddddd; }
+      &:hover { background: $dark-text-secondary; }
     }
 
     &.twitter {
       background: transparent;
-      color: #f7f7f7;
-      border-color: #f7f7f7;
+      color: $dark-text;
+      border-color: $dark-text;
 
-      &:hover { background: #262626; }
+      &:hover { background: $dark-surface-2; }
     }
   }
 
   .share-hint {
-    color: #717171;
+    color: $dark-text-secondary;
   }
 
   .skeleton-loader {
-    background: linear-gradient(90deg, #262626 25%, #333 50%, #262626 75%) !important;
+    background: linear-gradient(90deg, $dark-surface-2 25%, $dark-border 50%, $dark-surface-2 75%) !important;
+  }
+
+  // Project pages
+  .project {
+    .post-meta {
+      color: $dark-text-secondary;
+    }
   }
 }
