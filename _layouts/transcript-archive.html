@@ -1,0 +1,171 @@
+---
+layout: default
+---
+<div class="transcript-archive">
+  <header class="archive-header">
+    <h1>{{ page.title }}</h1>
+    <p class="archive-description">{{ content }}</p>
+  </header>
+
+  <div class="archive-controls">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search by guest name..." autocomplete="off">
+    </div>
+
+    <div class="filter-controls">
+      <select id="topic-filter">
+        <option value="">All Topics</option>
+        {% assign all_keywords = "" | split: "" %}
+        {% for transcript in site.transcripts %}
+          {% for keyword in transcript.keywords %}
+            {% assign all_keywords = all_keywords | push: keyword %}
+          {% endfor %}
+        {% endfor %}
+        {% assign unique_keywords = all_keywords | uniq | sort %}
+        {% for keyword in unique_keywords %}
+        <option value="{{ keyword }}">{{ keyword | capitalize | replace: "-", " " }}</option>
+        {% endfor %}
+      </select>
+
+      <select id="sort-select">
+        <option value="date-desc">Newest First</option>
+        <option value="date-asc">Oldest First</option>
+        <option value="views">Most Viewed</option>
+        <option value="guest">A-Z by Guest</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="archive-stats">
+    <span id="showing-count">{{ site.transcripts.size }}</span> of {{ site.transcripts.size }} episodes
+  </div>
+
+  <div class="transcript-grid" id="transcript-grid">
+    {% assign sorted_transcripts = site.transcripts | sort: "publish_date" | reverse %}
+    {% for transcript in sorted_transcripts %}
+    <article class="transcript-card"
+             data-guest="{{ transcript.guest | downcase }}"
+             data-title="{{ transcript.title | downcase }}"
+             data-topics="{{ transcript.keywords | join: ',' }}"
+             data-date="{{ transcript.publish_date | date: '%Y-%m-%d' }}"
+             data-views="{{ transcript.view_count | default: 0 }}">
+      <a href="{{ transcript.url | relative_url }}" class="card-link">
+        <div class="card-thumb">
+          <img src="https://img.youtube.com/vi/{{ transcript.video_id }}/mqdefault.jpg"
+               alt="{{ transcript.guest }}"
+               loading="lazy">
+          <span class="duration">{{ transcript.duration }}</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-guest">{{ transcript.guest }}</h3>
+          <p class="card-title">{{ transcript.title | truncate: 80 }}</p>
+          <div class="card-meta">
+            <span class="meta-date">{{ transcript.publish_date | date: "%b %Y" }}</span>
+            {% if transcript.view_count %}
+            <span class="meta-views">{{ transcript.view_count | divided_by: 1000 }}K views</span>
+            {% endif %}
+          </div>
+          {% if transcript.keywords %}
+          <div class="card-topics">
+            {% for keyword in transcript.keywords limit: 3 %}
+            <span class="topic-tag-small">{{ keyword | replace: "-", " " }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="no-results" id="no-results" style="display: none;">
+    <p>No episodes found matching your criteria.</p>
+    <button onclick="resetFilters()">Reset Filters</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const topicFilter = document.getElementById('topic-filter');
+  const sortSelect = document.getElementById('sort-select');
+  const grid = document.getElementById('transcript-grid');
+  const cards = Array.from(document.querySelectorAll('.transcript-card'));
+  const showingCount = document.getElementById('showing-count');
+  const noResults = document.getElementById('no-results');
+
+  // Check URL params for initial filter
+  const urlParams = new URLSearchParams(window.location.search);
+  const topicParam = urlParams.get('topic');
+  if (topicParam) {
+    topicFilter.value = topicParam;
+  }
+
+  function filterAndSort() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const selectedTopic = topicFilter.value;
+    const sortBy = sortSelect.value;
+
+    let visibleCards = cards.filter(card => {
+      const guest = card.dataset.guest;
+      const title = card.dataset.title;
+      const topics = card.dataset.topics.split(',');
+
+      const matchesSearch = !searchTerm ||
+        guest.includes(searchTerm) ||
+        title.includes(searchTerm);
+
+      const matchesTopic = !selectedTopic ||
+        topics.includes(selectedTopic);
+
+      return matchesSearch && matchesTopic;
+    });
+
+    // Sort
+    visibleCards.sort((a, b) => {
+      switch(sortBy) {
+        case 'date-desc':
+          return new Date(b.dataset.date) - new Date(a.dataset.date);
+        case 'date-asc':
+          return new Date(a.dataset.date) - new Date(b.dataset.date);
+        case 'views':
+          return parseInt(b.dataset.views) - parseInt(a.dataset.views);
+        case 'guest':
+          return a.dataset.guest.localeCompare(b.dataset.guest);
+        default:
+          return 0;
+      }
+    });
+
+    // Update DOM
+    grid.innerHTML = '';
+    visibleCards.forEach(card => grid.appendChild(card));
+
+    // Hide cards not in filtered list
+    cards.forEach(card => {
+      card.style.display = visibleCards.includes(card) ? 'block' : 'none';
+    });
+
+    // Update count
+    showingCount.textContent = visibleCards.length;
+    noResults.style.display = visibleCards.length === 0 ? 'block' : 'none';
+  }
+
+  searchInput.addEventListener('input', filterAndSort);
+  topicFilter.addEventListener('change', filterAndSort);
+  sortSelect.addEventListener('change', filterAndSort);
+
+  // Initial filter if URL param present
+  if (topicParam) {
+    filterAndSort();
+  }
+
+  // Reset function
+  window.resetFilters = function() {
+    searchInput.value = '';
+    topicFilter.value = '';
+    sortSelect.value = 'date-desc';
+    filterAndSort();
+  };
+});
+</script>

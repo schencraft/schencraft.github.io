@@ -1,0 +1,97 @@
+---
+layout: default
+---
+<article class="transcript-page">
+  <header class="transcript-header">
+    {% if page.video_id %}
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/{{ page.video_id }}"
+        title="{{ page.title }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    {% endif %}
+
+    <h1 class="transcript-guest">{{ page.guest }}</h1>
+    <p class="transcript-title">{{ page.title }}</p>
+
+    <div class="transcript-meta">
+      <span class="meta-date">{{ page.publish_date | date: "%B %d, %Y" }}</span>
+      <span class="meta-duration">{{ page.duration }}</span>
+      {% if page.view_count %}
+      <span class="meta-views">{{ page.view_count | divided_by: 1000 }}K views</span>
+      {% endif %}
+      <a href="{{ page.youtube_url }}" class="meta-link" target="_blank" rel="noopener">Watch on YouTube</a>
+    </div>
+
+    {% if page.keywords %}
+    <div class="transcript-topics">
+      {% for keyword in page.keywords %}
+      <a href="{{ '/transcripts/' | relative_url }}?topic={{ keyword | slugify }}" class="topic-tag">{{ keyword }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="transcript-body">
+    <div class="transcript-controls">
+      <button id="toggle-transcript" class="transcript-toggle">Show Full Transcript</button>
+    </div>
+
+    <div class="transcript-content" id="transcript-content" style="display: none;">
+      <div id="transcript-text">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  <nav class="transcript-nav">
+    <a href="{{ '/transcripts/' | relative_url }}" class="back-link">Back to All Episodes</a>
+  </nav>
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.getElementById('toggle-transcript');
+  const content = document.getElementById('transcript-content');
+  const transcriptText = document.getElementById('transcript-text');
+  let loaded = false;
+
+  toggleBtn.addEventListener('click', function() {
+    if (content.style.display === 'none') {
+      content.style.display = 'block';
+      toggleBtn.textContent = 'Hide Transcript';
+
+      // Load transcript from JSON if not already in content
+      if (!loaded && transcriptText.textContent.trim() === '') {
+        const slug = '{{ page.slug }}';
+        fetch('/assets/data/transcripts/' + slug + '.json')
+          .then(r => r.json())
+          .then(data => {
+            transcriptText.innerHTML = formatTranscript(data.transcript);
+            loaded = true;
+          })
+          .catch(err => {
+            transcriptText.innerHTML = '<p>Transcript not available.</p>';
+          });
+      }
+    } else {
+      content.style.display = 'none';
+      toggleBtn.textContent = 'Show Full Transcript';
+    }
+  });
+
+  function formatTranscript(text) {
+    // Format speaker labels and timestamps
+    return text
+      .replace(/^([A-Za-z\s]+)\s*\((\d{1,2}:\d{2}:\d{2})\):/gm,
+        '<p class="speaker"><strong>$1</strong> <span class="timestamp">$2</span></p><p>')
+      .replace(/\n\n/g, '</p><p>')
+      .replace(/\n/g, '<br>');
+  }
+});
+</script>

@@ -18,3 +18,9 @@ Thumbs.db
 __pycache__/
 *.pyc
 .venv/
+
+# Transcript source repo (cloned by import script)
+_source_transcripts/
+
+# Transcript JSON data (optional, transcripts embedded in markdown)
+_data/transcript_content/
