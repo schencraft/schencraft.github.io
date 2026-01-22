@@ -20,14 +20,14 @@
 </script>
 
 <style>
-/* Dark mode toggle button - positioned in header */
-.site-header .wrapper {
+/* Dark mode toggle button - fixed position in header */
+.site-header {
   position: relative;
 }
 
 .theme-toggle {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 100;
 }
 
 .theme-toggle:hover {
@@ -58,21 +58,14 @@
 
 html.dark .theme-toggle .icon-sun { display: block; }
 html.dark .theme-toggle .icon-moon { display: none; }
-
-/* Adjust nav to not overlap toggle */
-@media screen and (min-width: 600px) {
-  .site-nav {
-    margin-right: 2.5rem;
-  }
-}
 </style>
 
-<!-- Inject toggle button into header wrapper (always visible, even on mobile) -->
+<!-- Inject toggle button into header (always visible, consistent position) -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Find the header wrapper in Minima theme
-  const headerWrapper = document.querySelector('.site-header .wrapper');
-  if (!headerWrapper) return;
+  // Find the header in Minima theme (full width, not wrapper)
+  const header = document.querySelector('.site-header');
+  if (!header) return;
 
   // Create toggle button
   const toggle = document.createElement('button');
@@ -87,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </svg>
   `;
 
-  // Append to header wrapper
-  headerWrapper.appendChild(toggle);
+  // Append to header (not wrapper, for consistent positioning)
+  header.appendChild(toggle);
 
   // Handle click
   toggle.addEventListener('click', function() {
