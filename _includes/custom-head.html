@@ -33,7 +33,6 @@
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-  margin-left: 1rem;
 }
 
 .theme-toggle:hover {
@@ -52,12 +51,25 @@
 html.dark .theme-toggle .icon-sun { display: block; }
 html.dark .theme-toggle .icon-moon { display: none; }
 
-/* Mobile: position next to hamburger */
-@media screen and (max-width: 600px) {
+/* Desktop: position after nav links */
+@media screen and (min-width: 601px) {
   .site-nav {
-    position: static !important;
+    display: flex;
+    align-items: center;
   }
 
+  .site-nav .trigger {
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-toggle {
+    margin-left: 0.5rem;
+  }
+}
+
+/* Mobile: position next to hamburger */
+@media screen and (max-width: 600px) {
   .site-header .wrapper {
     position: relative;
   }
@@ -66,15 +78,13 @@ html.dark .theme-toggle .icon-moon { display: none; }
     position: absolute;
     top: 9px;
     right: 54px;
-    margin-left: 0;
   }
 }
 </style>
 
-<!-- Inject toggle button into nav (sits next to hamburger on mobile) -->
+<!-- Inject toggle button -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Find the nav in Minima theme
   const nav = document.querySelector('.site-nav');
   if (!nav) return;
 
@@ -91,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </svg>
   `;
 
-  // Insert at beginning of nav (before hamburger menu icon)
-  nav.insertBefore(toggle, nav.firstChild);
+  // Append to nav
+  nav.appendChild(toggle);
 
   // Handle click
   toggle.addEventListener('click', function() {
