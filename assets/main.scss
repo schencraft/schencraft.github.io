@@ -140,10 +140,10 @@ a {
 }
 
 // ========================================
-// Dark Mode (System Preference)
+// Dark Mode (Class-based toggle)
 // ========================================
 
-@media (prefers-color-scheme: dark) {
+html.dark {
   body {
     background-color: $dark-bg;
     color: $dark-text;
@@ -547,7 +547,7 @@ a {
 // Dark Mode - Airbnb Style
 // ========================================
 
-@media (prefers-color-scheme: dark) {
+html.dark {
   .news-date {
     border-color: #333;
     .date-text { color: #f7f7f7; }
@@ -1249,7 +1249,7 @@ a {
 }
 
 // Dark mode for components
-@media (prefers-color-scheme: dark) {
+html.dark {
   // Nutrition News
   .news-date {
     border-color: $dark-border;
