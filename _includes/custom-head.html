@@ -16,13 +16,14 @@
 })();
 </script>
 <style>
-.theme-toggle{background:0;border:0;border-radius:50%;cursor:pointer;padding:6px;margin-left:10px;color:inherit;opacity:.5;vertical-align:middle;line-height:0}
-.theme-toggle:hover{opacity:1;background:rgba(128,128,128,.1)}
-.theme-toggle svg{width:20px;height:20px}
+.theme-toggle{background:rgba(128,128,128,.08);border:1px solid rgba(128,128,128,.15);border-radius:50%;cursor:pointer;padding:7px;margin-left:12px;color:inherit;opacity:.7;vertical-align:middle;line-height:0;transition:all .2s}
+.theme-toggle:hover{opacity:1;background:rgba(128,128,128,.15);border-color:rgba(128,128,128,.3)}
+.theme-toggle svg{width:18px;height:18px;display:block}
 .icon-sun{display:none}
 .dark .icon-sun{display:block}
 .dark .icon-moon{display:none}
-.dark .theme-toggle:hover{background:rgba(255,255,255,.1)}
+.dark .theme-toggle{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15)}
+.dark .theme-toggle:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3)}
 </style>
 <script>
 addEventListener('DOMContentLoaded',function(){
