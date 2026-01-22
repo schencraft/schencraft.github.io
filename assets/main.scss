@@ -29,6 +29,211 @@ $dark-text-secondary: #a0a0a0;
 $dark-border: #3a3a3a;
 $dark-accent: #d4af37;
 
+// ========================================
+// Hero Section
+// ========================================
+
+.hero {
+  padding: 3rem 0 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $color-gray-lighter;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+
+    @media (max-width: 640px) {
+      font-size: 1.875rem;
+    }
+  }
+
+  .accent {
+    color: $color-accent;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+    color: $color-gray;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background: $color-black;
+  color: $color-white;
+
+  &:hover {
+    background: $color-gray-dark;
+    color: $color-white;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $color-black;
+  border: 1px solid $color-black;
+
+  &:hover {
+    background: $color-black;
+    color: $color-white;
+  }
+}
+
+// ========================================
+// Project Cards
+// ========================================
+
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background: $color-white;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $color-accent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: $color-accent-dark;
+      }
+    }
+  }
+
+  p {
+    color: $color-gray;
+    margin: 0 0 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: $color-gray-lightest;
+    border-radius: 4px;
+    font-size: 0.8125rem;
+    color: $color-gray-dark;
+  }
+}
+
+// ========================================
+// Episode Badge
+// ========================================
+
+.episode-badge {
+  display: inline-block;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.25rem 0.75rem;
+  background: $color-accent;
+  color: $color-white;
+  border-radius: 20px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+// ========================================
+// About Page
+// ========================================
+
+.skills-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-item {
+  padding: 1.25rem;
+  background: $color-gray-lightest;
+  border-radius: 8px;
+
+  strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $color-black;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: $color-gray;
+  }
+}
+
+.connect-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.connect-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: $color-white;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 8px;
+  text-decoration: none;
+  color: $color-black;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent-dark;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
 // Typography - Editorial Style
 body {
   font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
@@ -201,6 +406,85 @@ html.dark {
     border-top-color: $dark-border;
     background-color: $dark-bg;
     color: $dark-text-secondary;
+  }
+
+  // Hero
+  .hero {
+    border-bottom-color: $dark-border;
+
+    .tagline {
+      color: $dark-text-secondary;
+    }
+  }
+
+  .btn {
+    background: $dark-text;
+    color: $dark-bg;
+
+    &:hover {
+      background: $dark-text-secondary;
+      color: $dark-bg;
+    }
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: $dark-text;
+    border-color: $dark-text;
+
+    &:hover {
+      background: $dark-text;
+      color: $dark-bg;
+    }
+  }
+
+  // Project cards
+  .project-card {
+    background: $dark-surface;
+    border-color: $dark-border;
+
+    &:hover {
+      border-color: $dark-accent;
+    }
+
+    p {
+      color: $dark-text-secondary;
+    }
+
+    .tech-tag {
+      background: $dark-surface-2;
+      color: $dark-text-secondary;
+    }
+  }
+
+  // Episode badge
+  .episode-badge {
+    background: $dark-accent;
+    color: $dark-bg;
+  }
+
+  // About page
+  .skill-item {
+    background: $dark-surface;
+
+    strong {
+      color: $dark-text;
+    }
+
+    p {
+      color: $dark-text-secondary;
+    }
+  }
+
+  .connect-link {
+    background: $dark-surface;
+    border-color: $dark-border;
+    color: $dark-text;
+
+    &:hover {
+      border-color: $dark-accent;
+      color: $dark-accent;
+    }
   }
 }
 

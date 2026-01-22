@@ -3,6 +3,11 @@ layout: home
 title: Home
 ---
 
-Hi, I'm **Simon Chen** - a creative technologist exploring the intersection of design and technology.
-
-I write about UI/UX design, web development, and building digital products. Welcome to my corner of the internet.
+<div class="hero">
+  <h1>Hi, I'm <span class="accent">Simon Chen</span></h1>
+  <p class="tagline">Creative technologist exploring the intersection of design and technology.</p>
+  <div class="hero-links">
+    <a href="/projects/" class="btn">View Projects</a>
+    <a href="/about/" class="btn btn-outline">About Me</a>
+  </div>
+</div>
