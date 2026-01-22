@@ -58,6 +58,13 @@
 
 html.dark .theme-toggle .icon-sun { display: block; }
 html.dark .theme-toggle .icon-moon { display: none; }
+
+/* Mobile: move toggle left to avoid hamburger menu overlap */
+@media screen and (max-width: 600px) {
+  .theme-toggle {
+    right: 54px;
+  }
+}
 </style>
 
 <!-- Inject toggle button into header (always visible, consistent position) -->
