@@ -3,6 +3,7 @@ layout: post
 title: "Welcome to My Blog"
 date: 2026-01-11
 categories: [general]
+excerpt: "Hello and welcome! I'm Simon Chen, and this is my personal space on the internet where I share thoughts on design, technology, and the creative journey."
 ---
 
 Hello and welcome!
