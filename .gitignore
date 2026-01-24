@@ -24,3 +24,6 @@ _source_transcripts/
 
 # Transcript JSON data (optional, transcripts embedded in markdown)
 _data/transcript_content/
+
+# Claude Code local settings (personal/secrets)
+.claude/settings.local.json
