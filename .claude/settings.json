@@ -17,18 +17,5 @@
       "Bash(gh issue:*)",
       "WebFetch(domain:schencraft.github.io)"
     ]
-  },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo 'File modified: $TOOL_INPUT_PATH'"
-          }
-        ]
-      }
-    ]
   }
 }
